@@ -7,7 +7,6 @@ namespace MU3.User
         [MonoModEnumReplace]
         public new enum eTiming
         {
-            // originally includes n20 to p20, with MAX = 40 and Default = 20
             n100, n99, n98, n97, n96, n95, n94, n93, n92, n91,
             n90, n89, n88, n87, n86, n85, n84, n83, n82, n81,
             n80, n79, n78, n77, n76, n75, n74, n73, n72, n71,
@@ -53,6 +52,29 @@ namespace MU3.User
                         return;
                     }
                     this.timing = value;
+                }
+            }
+
+            private eTiming judgeAdjustment;
+            public new eTiming JudgeAdjustment
+            {
+                get
+                {
+                    return this.judgeAdjustment;
+                }
+                set
+                {
+                    if (eTiming.p100 < value)
+                    {
+                        this.judgeAdjustment = eTiming.p100;
+                        return;
+                    }
+                    if (value < eTiming.n100)
+                    {
+                        this.judgeAdjustment = eTiming.n100;
+                        return;
+                    }
+                    this.judgeAdjustment = value;
                 }
             }
 
