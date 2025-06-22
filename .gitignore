@@ -1,0 +1,8 @@
+.git
+.vs
+packages
+
+ExtendOffset/.vs
+ExtendOffset/obj
+ExtendOffset/bin
+ExtendOffset/lib
