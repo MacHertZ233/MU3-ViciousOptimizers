@@ -123,6 +123,28 @@ public class DataSet
 		}
 	}
 
+    public UserOption.eTiming JudgeAdjustment
+	{
+		get
+		{
+			return this.judgeAdjustment;
+		}
+		set
+		{
+			if (UserOption.eTiming.p100 < value) // originally p20, MAX is also ok
+			{
+				this.judgeAdjustment = UserOption.eTiming.p100;
+				return;
+			}
+			if (value < UserOption.eTiming.n100) // originally n20
+			{
+				this.judgeAdjustment = UserOption.eTiming.n100;
+				return;
+			}
+			this.judgeAdjustment = value;
+		}
+	}
+
     public bool isMax(UserOption.OptionName id)
     {
         bool result = false;
