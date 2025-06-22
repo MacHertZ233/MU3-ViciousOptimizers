@@ -61,14 +61,22 @@ private void setParam(UserOption.OptionName id, int value)
 ```
 
 ## MU3.Notes.GameOption
-Replace the values of a read-only array. They are the actual values of the offset setting.
+Replace the values of a read-only array. They are the actual values of the offset setting.\
+Actually I don't know how to patch a static class, so currently the method I use in code is to create another extended `timingTbl` in `MU3.Notes.GameOption` instead.
 ```csharp
 using System.Linq; // required to use Enumerable.Range()
 
 public static class Const
 {
-    public static ReadOnlyCollection<float> timingTbl = Array.AsReadOnly<float>((from i in Enumerable.Range(0, 201) select -10f + (float)i * 0.1f).ToArray<float>());
-    // originally from -2.0 to 2.0 with step 0.1
+    static Const()
+    {
+        // ...
+
+        public static ReadOnlyCollection<float> timingTbl = Array.AsReadOnly<float>((from i in Enumerable.Range(0, 201) select -10f + (float)i * 0.1f).ToArray<float>());
+        // originally from -2.0 to 2.0 with step 0.1
+
+        // ...
+    }
 }
 ```
 

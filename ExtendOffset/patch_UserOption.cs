@@ -4,8 +4,6 @@ namespace MU3.User
 {
     public class patch_UserOption : UserOption
     {
-        
-
         [MonoModEnumReplace]
         public new enum eTiming
         {
@@ -63,7 +61,7 @@ namespace MU3.User
             {
                 if (id == OptionName.JudgeAdjustment || id == OptionName.Timing)
                 {
-                    return timing == eTiming.MAX;
+                    return timing == eTiming.p100;
                 }
                 return orig_isMax(id);
             }
