@@ -1,6 +1,6 @@
-.git
-.vs
-packages
+.git/
+.vs/
+packages/
 
 ExtendOffset/.vs
 ExtendOffset/obj
