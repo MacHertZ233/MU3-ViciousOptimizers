@@ -1,8 +1,12 @@
 .git/
 .vs/
 packages/
+lib/
 
 ExtendOffset/.vs
 ExtendOffset/obj
 ExtendOffset/bin
-ExtendOffset/lib
+
+ShiftSECount/.vs
+ShiftSECount/obj
+ShiftSECount/bin

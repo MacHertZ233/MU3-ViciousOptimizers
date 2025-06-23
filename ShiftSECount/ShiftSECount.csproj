@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FBEE20BB-B5B5-426B-806C-D46354E9B4A7}</ProjectGuid>
+    <ProjectGuid>{715C3A87-0EA6-4F72-B6AF-1F3BC26A44D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExtendOffset</RootNamespace>
-    <AssemblyName>Assembly-CSharp.ExtendOffset.mm</AssemblyName>
+    <RootNamespace>ShiftSECount</RootNamespace>
+    <AssemblyName>Assembly-CSharp.ShiftSECount.mm</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -83,10 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="patch_GameOption.cs" />
-    <Compile Include="patch_OptionMiniSummaryController.cs" />
-    <Compile Include="patch_OptionSelecterController.cs" />
-    <Compile Include="patch_UserOption.cs" />
+    <Compile Include="patch_NotesManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
