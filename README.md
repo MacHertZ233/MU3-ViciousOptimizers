@@ -42,5 +42,3 @@ UnityEngine.UI.dll
 ```
 
 2. Open the solution with Visual Studio (I use VS2022) and build all projects.
-
-## [How I Modded the Assembly](docs/Mod%20Guide.md)

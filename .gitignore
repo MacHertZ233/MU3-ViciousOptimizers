@@ -2,6 +2,7 @@
 .vs/
 packages/
 lib/
+docs/
 
 ExtendOffset/.vs
 ExtendOffset/obj
