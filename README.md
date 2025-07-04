@@ -1,11 +1,14 @@
 # MU3ExtendOffset
+[English](README.md)\
+[简体中文](README_zh-hans.md)
+
 A mod for the game codename MU3 which extends the adjustment range of offset A & B to ±10.0.
 
-It contains an optional mod named ShiftSECount which makes the cue ticks before the music more aligned with the music rhythm.
+It contains an optional mod named ShiftSECount which makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
 
 ## Usage
 
-1. Install [BepInEx](https://github.com/BepInEx/BepInEx) 5 and [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader) properly. The `BepInEx` folder should be next to `mu3.exe`.
+1. Install [BepInEx](https://github.com/BepInEx/BepInEx) 5 and [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader) properly. It is recommended to put the `BepInEx` folder next to `mu3.exe` for easier configuration.
 
 2. Download the latest release [here](https://github.com/MacHertZ233/MU3ExtendOffset/releases/latest).
 
@@ -26,8 +29,6 @@ Replace `package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-off
 
 + The mod (ExtendOffset) is currently incompatible with MoreProfileOptions. A modded `Assembly-CSharp-offset10.dll` will be provided in release as a workaround.
 
-    + Conflicts are most possibly due to modifications applied to the same places. (e.g. `setupCpFuncArray()`)
-
 + [Solved] ~~When offset A is adjusted to a larger value, the cue ticks before the music starts will noticeably deviate from the music.~~
 
 ## Build from Source
@@ -41,4 +42,4 @@ UnityEngine.dll
 UnityEngine.UI.dll
 ```
 
-2. Open the solution with Visual Studio (I use VS2022) and build all projects.
+2. Open the solution with Visual Studio (preferably VS2022) and build all projects.
