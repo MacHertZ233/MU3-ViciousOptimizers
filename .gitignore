@@ -4,10 +4,6 @@ packages/
 lib/
 docs/
 
-ExtendOffset/.vs
-ExtendOffset/obj
-ExtendOffset/bin
-
-ShiftSECount/.vs
-ShiftSECount/obj
-ShiftSECount/bin
+*/.vs
+*/obj
+*/bin

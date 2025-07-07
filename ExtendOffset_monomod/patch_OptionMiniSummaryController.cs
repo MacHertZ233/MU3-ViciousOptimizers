@@ -13,7 +13,7 @@ namespace MU3
         {
             if (id == UserOption.OptionName.Timing || id == UserOption.OptionName.JudgeAdjustment)
             {
-                this.arrayIcon[(int)id].transform.Find("NUL_Option_mini_Icon/NUM_DecimalPoint_1keta").GetComponent<MU3UICounter>().Counter = -10.0 + 0.1 * (double)value; // originally -2.0 + ...
+                this.arrayIcon[(int)id].transform.Find("NUL_Option_mini_Icon/NUM_DecimalPoint_1keta").GetComponent<MU3UICounter>().Counter = -10.0 + 0.1 * (double)value;
                 return;
             }
             else
