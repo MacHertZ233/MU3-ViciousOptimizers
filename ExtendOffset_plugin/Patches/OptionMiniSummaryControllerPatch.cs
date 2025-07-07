@@ -7,7 +7,7 @@ using UnityEngine;
 namespace ExtendOffset_plugin.Patches
 {
     [HarmonyPatch(typeof(OptionMiniSummaryController))]
-    internal class OptionMiniSummaryControllerPatch
+    class OptionMiniSummaryControllerPatch
     {
         [HarmonyPrefix]
         [HarmonyPatch("setParam")]

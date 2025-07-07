@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtendOffsetPlugin.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Patches\GameOptionPatch.cs" />
     <Compile Include="Patches\OptionMiniSummaryControllerPatch.cs" />
     <Compile Include="Patches\OptionSelecterControllerPatch.cs" />

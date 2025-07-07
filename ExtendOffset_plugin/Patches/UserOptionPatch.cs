@@ -5,9 +5,9 @@ using static MU3.User.UserOption;
 namespace ExtendOffset_plugin.Patches
 {
     [HarmonyPatch(typeof(UserOption))]
-    internal class UserOptionPatch
+    class UserOptionPatch
     {
-        public new enum eTimingPatched
+        public enum eTimingPatched
         {
             n100, n99, n98, n97, n96, n95, n94, n93, n92, n91,
             n90, n89, n88, n87, n86, n85, n84, n83, n82, n81,
@@ -34,43 +34,51 @@ namespace ExtendOffset_plugin.Patches
 
         
         [HarmonyPatch(typeof(DataSet))]
-        internal class DataSetPatch
+        public class DataSetPatch
         {
             [HarmonyPrefix]
-            [HarmonyPatch("Timing", MethodType.Setter)]
+            [HarmonyPatch(typeof(DataSet), nameof(DataSet.Timing), MethodType.Setter)]
             static bool TimingSetterPrefix(ref UserOption.eTiming value, ref DataSet __instance)
             {
                 if ((int)value > (int)eTimingPatched.p100)
                 {
-                    value = (UserOption.eTiming)(int)eTimingPatched.p100;
+                    Traverse.Create(__instance).Field("timing").SetValue((int)eTimingPatched.p100);
                 }
                 else if ((int)value < (int)eTimingPatched.n100)
                 {
-                    value = (UserOption.eTiming)(int)eTimingPatched.n100;
+                    Traverse.Create(__instance).Field("timing").SetValue((int)eTimingPatched.n100);
                 }
-                Traverse.Create(__instance).Field("timing").SetValue(value);
+                else
+                    Traverse.Create(__instance).Field("timing").SetValue((int)value);
+
+                //System.Console.WriteLine($"hmmm you know what? I got a value of {value} and I help U clamp it to {(int)Traverse.Create(__instance).Field("timing").GetValue<UserOption.eTiming>()}");
+
                 return false;
             }
 
             [HarmonyPrefix]
-            [HarmonyPatch("JudgeAdjustment", MethodType.Setter)]
+            [HarmonyPatch(typeof(DataSet), nameof(DataSet.JudgeAdjustment), MethodType.Setter)]
             static bool JudgeAdjustmentSetterPrefix(ref UserOption.eTiming value, ref DataSet __instance)
             {
                 if ((int)value > (int)eTimingPatched.p100)
                 {
-                    value = (UserOption.eTiming)(int)eTimingPatched.p100;
+                    Traverse.Create(__instance).Field("judgeAdjustment").SetValue((int)eTimingPatched.p100);
                 }
                 else if ((int)value < (int)eTimingPatched.n100)
                 {
-                    value = (UserOption.eTiming)(int)eTimingPatched.n100;
+                    Traverse.Create(__instance).Field("judgeAdjustment").SetValue((int)eTimingPatched.n100);
                 }
-                Traverse.Create(__instance).Field("judgeAdjustment").SetValue(value);
+                else
+                    Traverse.Create(__instance).Field("judgeAdjustment").SetValue((int)value);
+
+                //System.Console.WriteLine($"hey! again? I got a value of {value} and I help U clamp it to {(int)Traverse.Create(__instance).Field("judgeAdjustment").GetValue<UserOption.eTiming>()}");
+                
                 return false;
             }
 
             [HarmonyPrefix]
-            [HarmonyPatch("isMax")]
-            static bool IsMaxSetterPrefix(ref UserOption.OptionName id, ref bool __result, ref DataSet __instance)
+            [HarmonyPatch(typeof(DataSet), "isMax")]
+            static bool IsMaxPrefix(ref UserOption.OptionName id, ref bool __result, ref DataSet __instance)
             {
                 if (id == OptionName.JudgeAdjustment || id == OptionName.Timing)
                 {

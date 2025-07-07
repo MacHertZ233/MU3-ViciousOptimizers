@@ -20,6 +20,7 @@ namespace ExtendOffset_plugin
             harmony.PatchAll(typeof(ExtendOffsetPlugin));
             harmony.PatchAll(typeof(GameOptionPatch));
             harmony.PatchAll(typeof(UserOptionPatch));
+            harmony.PatchAll(typeof(UserOptionPatch.DataSetPatch));
             harmony.PatchAll(typeof(OptionSelecterControllerPatch));
             harmony.PatchAll(typeof(OptionMiniSummaryControllerPatch));
 

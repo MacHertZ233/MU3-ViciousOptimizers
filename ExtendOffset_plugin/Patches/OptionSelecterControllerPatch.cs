@@ -6,7 +6,7 @@ using UnityEngine;
 namespace ExtendOffset_plugin.Patches
 {
     [HarmonyPatch(typeof(OptionSelecterController))]
-    internal class OptionSelecterControllerPatch
+    class OptionSelecterControllerPatch
     {
         [HarmonyPostfix]
         [HarmonyPatch("setupCpFuncArray")]
