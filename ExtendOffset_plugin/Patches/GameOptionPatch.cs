@@ -2,10 +2,8 @@
 using MU3.Notes;
 using MU3.User;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 
 namespace ExtendOffset_plugin.Patches
 {

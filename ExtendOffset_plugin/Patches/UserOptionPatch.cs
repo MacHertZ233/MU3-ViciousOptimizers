@@ -1,10 +1,5 @@
 ﻿using HarmonyLib;
-using MU3.Notes;
 using MU3.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using static MU3.User.UserOption;
 
 namespace ExtendOffset_plugin.Patches

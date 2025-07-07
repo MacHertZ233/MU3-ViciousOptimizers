@@ -2,11 +2,6 @@
 using MU3;
 using MU3.CustomUI;
 using UnityEngine;
-using MU3.Notes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ExtendOffset_plugin.Patches
 {

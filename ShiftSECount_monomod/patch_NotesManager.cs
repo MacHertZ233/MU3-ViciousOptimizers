@@ -1,17 +1,5 @@
-﻿using MU3.Battle;
-using MU3.Data;
-using MU3.Game;
-using MU3.Reader;
-using MU3.Sys;
-using MU3.Tutorial;
-using MU3.Util;
-using System;
+﻿using MU3.Game;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-using static MU3.Notes.NotesManager;
 
 namespace MU3.Notes
 {

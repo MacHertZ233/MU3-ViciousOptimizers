@@ -1,11 +1,6 @@
 ﻿using BepInEx;
-using BepInEx.Logging;
 using ExtendOffset_plugin.Patches;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ExtendOffset_plugin
 {
@@ -17,7 +12,7 @@ namespace ExtendOffset_plugin
         const string modVersion = "1.0.0";
 
         private readonly Harmony harmony = new Harmony(modGUID);
-        internal ManualLogSource logger;
+        internal BepInEx.Logging.ManualLogSource logger;
 
         void Awake()
         {
