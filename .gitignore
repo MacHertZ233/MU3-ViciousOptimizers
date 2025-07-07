@@ -3,7 +3,8 @@
 packages/
 lib/
 docs/
+bin/
 
-*/.vs
-*/obj
-*/bin
+*/.vs/
+*/obj/
+*/bin/
