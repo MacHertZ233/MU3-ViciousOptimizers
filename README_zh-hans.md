@@ -1,25 +1,35 @@
-# MU3ExtendOffset
+# MU3-ViciousOptimizers
 [English](README.md)\
 [简体中文](README_zh-hans.md)
 
-一个代号MU3游戏的mod。可以把A/B延迟的可调整范围扩大为±10.0。
+一系列代号MU3游戏的mod，专为最大化节奏游戏体验而制作。
 
-同时包含一个可选的mod——*ShiftSECount*，用来消除音乐播放前的提示音与音乐的节奏之间的时间差距（如果开发团队没把对音搞砸的话）。
+够邪恶，也够有用。
 
-## 用法
+目前包含了以下mod：
++ **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0。
++ **ShiftSECount**：消除音乐播放前的提示音与音乐的节奏之间的时间差距（如果开发团队没把对音搞砸的话）。
++ **MuteEnemySound**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
 
-1. 为MU3游戏正确安装 [BepInEx](https://github.com/BepInEx/BepInEx) 5 和 [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader)（可选）。为方便配置，建议将名为`BepInEx`的文件夹与`mu3.exe`放在同一路径下。
+## 依赖
++ [BepInEx](https://github.com/BepInEx/BepInEx) 5
++ [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader)（可选，使用MonoMod方法时需安装）
 
-2. 从[这里](https://github.com/MacHertZ233/MU3ExtendOffset/releases/latest)下载最新版本的mod。
+## 安装方式
+每个mod的安装均有多种方式，推荐度从下到上递增。
 
-3. 有3种方法可以安装*ExtendOffset*：
+1. ExtendOffset：
     + **插件方法**：把`ExtendOffset_plugin.dll`放入`BepInEx\plugins`文件夹中
-    + **MonoMod方法**：把`Assembly-CSharp.ExtendOffset.mm.dll`放入`BepInEx\monomod`文件夹中。这种方法需要您安装BepInEx.MonoMod.Loader。
+    + **MonoMod方法**：把`Assembly-CSharp.ExtendOffset.mm.dll`放入`BepInEx\monomod`文件夹中。
     + **程序集（Assembly）替换方法**：把`package\mu3_Data\Managed\Assembly-CSharp.dll`用`Assembly-CSharp-offset10.dll`覆盖掉。注意注意！务必在当且仅当以上两种方法都不可行时再使用此方法。
 
-4. 如果您需要潜在的更好的节奏游戏体验，那么有2种方法可以安装 *ShiftSECount*：
+2. ShiftSECount：
     + **插件方法**：把`ShiftSECount_plugin.dll`放入`BepInEx\plugins`文件夹中。
-    + **MonoMod方法**：把`Assembly-CSharp.ShiftSECount.mm.dll`放入`BepInEx\monomod`文件夹中。这种方法需要您安装BepInEx.MonoMod.Loader。
+    + **MonoMod方法**：把`Assembly-CSharp.ShiftSECount.mm.dll`放入`BepInEx\monomod`文件夹中。
+
+3. MuteEnemySound：
+    + **插件方法**：把`MuteEnemySound_plugin.dll`放入`BepInEx\plugins`文件夹中。
+    + **MonoMod方法**：把`Assembly-CSharp.MuteEnemySound.mm.dll`放入`BepInEx\monomod`文件夹中。
 
 ## 支持的游戏版本
 
@@ -32,7 +42,7 @@
     + 作为最终替代方案，将会提供一个修改过后的`Assembly-CSharp-offset10.dll` 。
 
 + 当A延迟调整到较大值时，音乐开始前的提示音会明显偏离音乐节奏。
-    + 使用*ShiftSECount*可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
+    + 使用ShiftSECount可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
 
 ## 从源代码构建
 
