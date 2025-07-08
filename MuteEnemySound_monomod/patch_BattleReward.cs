@@ -1,4 +1,6 @@
-﻿using MU3.Util;
+﻿// excessive modification?
+
+using MU3.Util;
 using System.Collections.Generic;
 
 namespace MU3.Battle

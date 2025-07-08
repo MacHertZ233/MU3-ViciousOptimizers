@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace ShiftSECount_plugin.Patches
 {
     [HarmonyPatch(typeof(NotesManager))]
-    internal class NotesManagerPatch
+    public class NotesManagerPatch
     {
         [HarmonyPostfix]
         [HarmonyPatch("loadScore")]

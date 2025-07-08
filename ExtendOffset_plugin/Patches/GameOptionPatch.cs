@@ -8,7 +8,7 @@ using System.Linq;
 namespace ExtendOffset_plugin.Patches
 {
     [HarmonyPatch(typeof(GameOption))]
-    class GameOptionPatch
+    public class GameOptionPatch
     {
         public static ReadOnlyCollection<float> timingTbl = Array.AsReadOnly<float>((from i in Enumerable.Range(0, 201)
                                                                                      select -10f + (float)i * 0.1f).ToArray<float>());

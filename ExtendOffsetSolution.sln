@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_plugin", "Shif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_monomod", "MuteEnemySound_monomod\MuteEnemySound_monomod.csproj", "{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_plugin", "MuteEnemySound_plugin\MuteEnemySound_plugin.csproj", "{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

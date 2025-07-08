@@ -1,12 +1,4 @@
-﻿using MU3.Sound;
-using MU3.Util;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using static MU3.Battle.EnemyManager;
-
-namespace MU3
+﻿namespace MU3
 {
     internal class patch_UIEnemyInfo : UIEnemyInfo
     {
