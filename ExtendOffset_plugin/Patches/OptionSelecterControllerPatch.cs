@@ -15,7 +15,6 @@ namespace ExtendOffset_plugin.Patches
             OptionSelecterController.chengeParamFuncArray[] cpFuncArray = Traverse.Create(__instance).Field("cpFuncArray").GetValue<OptionSelecterController.chengeParamFuncArray[]>();
             cpFuncArray[2].max = 200;
             cpFuncArray[3].max = 200;
-            //__instance.cpFuncArray = cpFuncArray;
         }
 
         [HarmonyPrefix]
