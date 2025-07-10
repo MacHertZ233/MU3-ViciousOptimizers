@@ -10,26 +10,18 @@
 + **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0。
 + **ShiftSECount**：消除音乐播放前的提示音与音乐的节奏之间的时间差距（如果开发团队没把对音搞砸的话）。
 + **MuteEnemySound**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
+    + **MuteEnemySoundLite**: 仅消除敌人的人声。此mod是为想通过音频了解战斗进展的人而制作。
 
 ## 依赖
 + [BepInEx](https://github.com/BepInEx/BepInEx) 5
 + [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader)（可选，使用MonoMod方法时需安装）
 
 ## 安装方式
-每个mod的安装均有多种方式，推荐度从下到上递增。
+每个mod的安装均有两种方式，选择其一即可。
++ **插件方法**：把`<mod名称>_plugin.dll`放入`BepInEx\plugins`文件夹中。
++ **MonoMod方法**：把`Assembly-CSharp.<mod名称>.mm.dll`放入`BepInEx\monomod`文件夹中。
 
-1. ExtendOffset：
-    + **插件方法**：把`ExtendOffset_plugin.dll`放入`BepInEx\plugins`文件夹中
-    + **MonoMod方法**：把`Assembly-CSharp.ExtendOffset.mm.dll`放入`BepInEx\monomod`文件夹中。
-    + **程序集（Assembly）替换方法**：把`package\mu3_Data\Managed\Assembly-CSharp.dll`用`Assembly-CSharp-offset10.dll`覆盖掉。注意注意！务必在当且仅当以上两种方法都不可行时再使用此方法。
-
-2. ShiftSECount：
-    + **插件方法**：把`ShiftSECount_plugin.dll`放入`BepInEx\plugins`文件夹中。
-    + **MonoMod方法**：把`Assembly-CSharp.ShiftSECount.mm.dll`放入`BepInEx\monomod`文件夹中。
-
-3. MuteEnemySound：
-    + **插件方法**：把`MuteEnemySound_plugin.dll`放入`BepInEx\plugins`文件夹中。
-    + **MonoMod方法**：把`Assembly-CSharp.MuteEnemySound.mm.dll`放入`BepInEx\monomod`文件夹中。
+对于ExtendOffset，还有一种最终方案，即是把`package\mu3_Data\Managed\Assembly-CSharp.dll`用`Assembly-CSharp-offset10.dll`覆盖掉。注意注意！务必在当且仅当以上两种方法都不可行时再使用此方法。
 
 ## 支持的游戏版本
 

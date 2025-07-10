@@ -10,27 +10,19 @@ So far, the collection includes:
 + ***ExtendOffset***: Extends the adjustment range of offset A & B from ±2.0 to ±10.0.
 + ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
 + ***MuteEnemySound***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
+    + ***MuteEnemySoundLite***: Eliminates enemies' vocals only. For those who want to get their battle progress on audio.
 
 ## Dependencies
 
 + [BepInEx](https://github.com/BepInEx/BepInEx) 5
-+ [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader) (optional, required for MonoMod methods)
++ [BepInEx.MonoMod.Loader](https://github.com/BepInEx/BepInEx.MonoMod.Loader) (optional, required for MonoMod method)
 
 ## Installation
-There are multiple ways to install each mod, and the preferred method goes from top to bottom.
+There are 2 ways to install each mod. Just choose between one of them.
++ **Plugin Method**: Put `<ModName>_plugin.dll` into `BepInEx\plugins` folder.
++ **MonoMod Method**: Put `Assembly-CSharp.<ModName>.mm.dll` into `BepInEx\monomod` folder.
 
-1. *ExtendOffset*:
-    + **Plugin Method**: Put `ExtendOffset_plugin.dll` into `BepInEx\plugins` folder.
-    + **MonoMod Method**: Put `Assembly-CSharp.ExtendOffset.mm.dll` into `BepInEx\monomod` folder.
-    + **Assembly Replacement Method**: Replace `package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
-
-2. *ShiftSECount*:
-    + **Plugin Method**: Put `ShiftSECount_plugin.dll` into `BepInEx\plugins` folder.
-    + **MonoMod Method**: Put `Assembly-CSharp.ShiftSECount.mm.dll` into `BepInEx\monomod` folder.
-
-3. *MuteEnemySound*:
-    + **Plugin Method**: Put `MuteEnemySound_plugin.dll` into `BepInEx\plugins` folder.
-    + **MonoMod Method**: Put `Assembly-CSharp.MuteEnemySound.mm.dll` into `BepInEx\monomod` folder.
+For *ExtendOffset*, there is also a final solution, which is to replace `package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
 
 ## Supported Game Version
 
@@ -38,8 +30,8 @@ There are multiple ways to install each mod, and the preferred method goes from 
 
 ## Known Issues
 
-+ The MonoMod form of *ExtendOffset* is currently incompatible with *MoreProfileOptions*.
-    + The Plugin form released lately is expected to address this issue, but still lacks more testing.
++ The MonoMod version of *ExtendOffset* is currently incompatible with *MoreProfileOptions*.
+    + The Plugin version released lately is expected to address this issue, but still lacks more testing.
     + A modded `Assembly-CSharp-offset10.dll` will be provided as a final workaround. 
 
 + When offset A is adjusted to a larger value, the cue ticks before the music starts will noticeably deviate from the music.
