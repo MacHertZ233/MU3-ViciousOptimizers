@@ -30,7 +30,7 @@ For *ExtendOffset*, there is also a final solution, which is to replace `package
 
 ## Known Issues
 
-+ The MonoMod version of *ExtendOffset* is currently incompatible with *MoreProfileOptions*.
++ The MonoMod version of *ExtendOffset* is currently incompatible with [*MoreProfileOptions*](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/).
     + The Plugin version released lately is expected to address this issue, but still lacks more testing.
     + A modded `Assembly-CSharp-offset10.dll` will be provided as a final workaround. 
 
@@ -52,3 +52,7 @@ BepInEx.dll
 ```
 
 2. Open the solution with Visual Studio (preferably VS2022) and build all projects.
+
+## Credit
+
++ [mu3-mods](https://gitea.tendokyu.moe/akanyan/mu3-mods), for providing inspiration and reference for my mods.

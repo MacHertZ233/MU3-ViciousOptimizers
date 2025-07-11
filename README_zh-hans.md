@@ -29,7 +29,7 @@
 
 ## 已知问题
 
-+ MonoMod版本的ExtendOffset目前与MoreProfileOptions不兼容。
++ MonoMod版本的ExtendOffset目前与[MoreProfileOptions](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/)不兼容。
     + 最新发布的插件版本旨在解决这一问题，但仍欠缺更多测试。
     + 作为最终替代方案，将会提供一个修改过后的`Assembly-CSharp-offset10.dll` 。
 
@@ -51,3 +51,7 @@ BepInEx.dll
 ```
 
 2. 用Visual Studio（最好是VS2022）打开解决方案并构建所有项目。
+
+## 致谢
+
++ [mu3-mods](https://gitea.tendokyu.moe/akanyan/mu3-mods)——为我制作mod提供了灵感和参考
