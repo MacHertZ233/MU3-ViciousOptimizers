@@ -24,13 +24,13 @@ There are 2 ways to install each mod. Just choose between one of them.
 
 For *ExtendOffset*, there is also a final solution, which is to replace `package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
 
-## Supported Game Version
+## Supported Game Versions
 
 + 1.50
 
 ## Known Issues
 
-+ The MonoMod version of *ExtendOffset* is currently incompatible with *MoreProfileOptions*.
++ The MonoMod version of *ExtendOffset* is currently incompatible with [*MoreProfileOptions*](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/).
     + The Plugin version released lately is expected to address this issue, but still lacks more testing.
     + A modded `Assembly-CSharp-offset10.dll` will be provided as a final workaround. 
 
@@ -52,3 +52,7 @@ BepInEx.dll
 ```
 
 2. Open the solution with Visual Studio (preferably VS2022) and build all projects.
+
+## Credit
+
++ [mu3-mods](https://gitea.tendokyu.moe/akanyan/mu3-mods), for providing inspiration and reference for my mods.
