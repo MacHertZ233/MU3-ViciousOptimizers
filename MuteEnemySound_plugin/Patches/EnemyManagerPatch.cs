@@ -123,11 +123,11 @@ namespace MuteEnemySound_plugin.Patches
         [HarmonyPrefix]
         [HarmonyPatch("makeZakoSet")]
         static bool MakeZakoSetPrefix(EnemyManager __instance, int wave, int set,
-            ref RandomList ____randomList, ref EnemyZakoList  ____zakoList)
+            ref RandomList ____randomList, ref EnemyZakoList ____zakoList)
         {
             GameEngine gameEngine = Traverse.Create(__instance).Property<GameEngine>("gameEngine").Value;
-
             NotesManager.WaveDetailData wDD = Traverse.Create(__instance).Method("getWDD").GetValue<NotesManager.WaveDetailData>();
+
             if (wDD != null)
             {
                 ____randomList.shuffle();
@@ -144,7 +144,7 @@ namespace MuteEnemySound_plugin.Patches
                     param.arrayNum = ____randomList[i];
                     param.playerTransform = gameEngine.player.transform;
                     enemyZako.initialize(param);
-                     ____zakoList.Add(enemyZako);
+                    ____zakoList.Add(enemyZako);
                 }
                 if (wave != 0 || set != 0)
                 {

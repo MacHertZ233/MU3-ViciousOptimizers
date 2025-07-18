@@ -1,9 +1,5 @@
-﻿using MU3.DataStudio;
-using MU3.DB;
-using MU3.Notes;
+﻿using MU3.Notes;
 using MU3.Util;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace MU3.Battle
 {

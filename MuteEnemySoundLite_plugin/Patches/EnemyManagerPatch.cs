@@ -6,6 +6,7 @@ using static MU3.Battle.EnemyManager;
 
 namespace MuteEnemySoundLite_plugin.Patches
 {
+    [HarmonyPatch(typeof(EnemyManager))]
     public class EnemyManagerPatch
     {
         [HarmonyPrefix]
@@ -14,8 +15,8 @@ namespace MuteEnemySoundLite_plugin.Patches
             ref RandomList ____randomList, ref EnemyZakoList ____zakoList)
         {
             GameEngine gameEngine = Traverse.Create(__instance).Property<GameEngine>("gameEngine").Value;
-
             NotesManager.WaveDetailData wDD = Traverse.Create(__instance).Method("getWDD").GetValue<NotesManager.WaveDetailData>();
+
             if (wDD != null)
             {
                 ____randomList.shuffle();
