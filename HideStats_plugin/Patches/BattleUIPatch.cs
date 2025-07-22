@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using MU3;
+using MU3.Battle;
 using UnityEngine;
 
 namespace HideStats_plugin.Patches
@@ -13,14 +14,12 @@ namespace HideStats_plugin.Patches
         {
             ____playerInfo.gameObject.SetActive(false);
             ____enemyInfo.gameObject.SetActive(false);
-            ____enemyDamageInfo.gameObject.SetActive(false);
         }
 
         [HarmonyPrefix]
-        [HarmonyPatch("Update")]
-        static bool UpdatePrefix(ref UIJudge ____judgeInfo)
+        [HarmonyPatch("playEnemyDamage")]
+        static bool PlayEnemyDamagePrefix(Vector3 posWorld, Vector2 posScreenOffset, ColorEnemyDamage color, SizeEnemyDamage size, int damage, float scale)
         {
-            ____judgeInfo.execute();
             return false;
         }
     }

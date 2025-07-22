@@ -9,7 +9,7 @@ namespace MuteEnemySound_plugin
     {
         const string modGUID = "machertz233.muteenemysound";
         const string modName = "MuteEnemySound";
-        const string modVersion = "1.0.0";
+        const string modVersion = "1.0.1";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         internal BepInEx.Logging.ManualLogSource logger;
@@ -19,6 +19,7 @@ namespace MuteEnemySound_plugin
             harmony.PatchAll(typeof(MuteEnemySoundPlugin));
             harmony.PatchAll(typeof(BattleRewardPatch));
             harmony.PatchAll(typeof(EnemyManagerPatch));
+            harmony.PatchAll(typeof(EnemyViewPatch));
             harmony.PatchAll(typeof(UIEnemyInfoPatch));
 
             logger.LogInfo($"Plugin {modName} is loaded!");

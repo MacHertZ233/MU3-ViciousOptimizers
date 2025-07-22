@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Patches\BattleRewardPatch.cs" />
     <Compile Include="Patches\EnemyManagerPatch.cs" />
+    <Compile Include="Patches\EnemyViewPatch.cs" />
     <Compile Include="Patches\UIEnemyInfoPatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

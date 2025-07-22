@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="patch_BattleReward.cs" />
     <Compile Include="patch_EnemyManager.cs" />
+    <Compile Include="patch_EnemyView.cs" />
     <Compile Include="patch_UIEnemyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
