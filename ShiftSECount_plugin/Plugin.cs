@@ -15,11 +15,11 @@ namespace ShiftSECount_plugin
         internal BepInEx.Logging.ManualLogSource logger;
         void Awake()
         {
-            logger = BepInEx.Logging.Logger.CreateLogSource(modGUID);
+            logger = BepInEx.Logging.Logger.CreateLogSource(modName);
             harmony.PatchAll(typeof(ShiftSECountPlugin));
             harmony.PatchAll(typeof(NotesManagerPatch));
 
-            logger.LogInfo($"Plugin {modName} is loaded!");
+            logger.LogInfo($"Plugin {modName} ({modGUID}) is loaded!");
         }
     }
 }

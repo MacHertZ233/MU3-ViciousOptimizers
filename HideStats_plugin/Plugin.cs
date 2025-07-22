@@ -20,7 +20,7 @@ namespace HideStats_plugin
             harmony.PatchAll(typeof(HideStatsPlugin));
             harmony.PatchAll(typeof(BattleUIPatch));
 
-            logger.LogInfo($"Plugin {modName} is loaded!");
+            logger.LogInfo($"Plugin {modName} ({modGUID}) is loaded!");
         }
     }
 }
