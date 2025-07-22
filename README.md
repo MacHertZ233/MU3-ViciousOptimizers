@@ -11,6 +11,7 @@ So far, the collection includes:
 + ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
 + ***MuteEnemySound***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
     + ***MuteEnemySoundLite***: Eliminates enemies' vocals only. For those who want to get their battle progress on audio.
++ ***HideStats***: Hides player panel on the left and enemy panel on the right in battle. Also hides damage numbers.
 
 ## Dependencies
 
@@ -36,6 +37,8 @@ For *ExtendOffset*, there is also a final solution, which is to replace `package
 
 + When offset A is adjusted to a larger value, the cue ticks before the music starts will noticeably deviate from the music.
     + Using *ShiftSECount* will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
+
++ *HideStats* does not hide Battle Retire info.
 
 ## Build from Source
 
