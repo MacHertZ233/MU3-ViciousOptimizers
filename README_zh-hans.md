@@ -47,6 +47,8 @@
 + 当使用ExtendOffset，并将A延迟调整到较大的数值时（无论正负），音乐开始前的提示音会明显偏离音乐节奏。
     + 使用ShiftSECount可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
 
++ CleanBattlefield无法隐藏成绩结算界面的卡牌技能信息。
+
 ## 从源代码构建
 
 1. 把`Assembly-CSharp.dll`放入`.\lib`文件夹中。它可以从`<MU3游戏路径>\package\mu3_Data\Managed`中获取。

@@ -48,6 +48,8 @@ Currently only *CleanBattlefield* supports settings changes in this way. More in
 + When *ExtendOffset* is used, and offset A ia adjusted to a larger value (whether positive or negative), the cue ticks before the music starts will noticeably deviate from the music.
     + Using *ShiftSECount* will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
 
++ *CleanBattlefield* does not hide skills info in the final score page. 
+
 ## Build from Source
 
 1. Put `Assembly-CSharp.dll` into `.\lib` folder. It can be retrieved from `<MU3_game_path>\package\mu3_Data\Managed`. 
