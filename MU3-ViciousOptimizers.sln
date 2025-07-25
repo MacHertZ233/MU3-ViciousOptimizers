@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySoundLite_monomod"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySoundLite_plugin", "MuteEnemySoundLite_plugin\MuteEnemySoundLite_plugin.csproj", "{F89D5E0D-856A-4008-87C4-388AE389D0A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideStats_plugin", "HideStats_plugin\HideStats_plugin.csproj", "{378C0EDE-6241-4096-A211-80DCF6B26EDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_plugin", "CleanBattlefield_plugin\CleanBattlefield_plugin.csproj", "{378C0EDE-6241-4096-A211-80DCF6B26EDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideStats_monomod", "HideStats_monomod\HideStats_monomod.csproj", "{33007EAD-9AF8-447E-B76F-7FDF3AED67B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_monomod", "CleanBattlefield_monomod\CleanBattlefield_monomod.csproj", "{33007EAD-9AF8-447E-B76F-7FDF3AED67B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

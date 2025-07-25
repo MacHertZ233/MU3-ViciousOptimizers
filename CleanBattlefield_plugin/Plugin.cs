@@ -1,15 +1,15 @@
 ﻿using BepInEx;
 using HarmonyLib;
-using HideStats_plugin.Patches;
+using CleanBattlefield_plugin.Patches;
 
-namespace HideStats_plugin
+namespace CleanBattlefield_plugin
 {
     [BepInPlugin(modGUID, modName, modVersion)]
-    public class HideStatsPlugin : BaseUnityPlugin
+    public class CleanBattlefieldPlugin : BaseUnityPlugin
     {
-        const string modGUID = "machertz233.hidestats";
-        const string modName = "HideStats";
-        const string modVersion = "1.0.0";
+        const string modGUID = "machertz233.CleanBattlefield";
+        const string modName = "CleanBattlefield";
+        const string modVersion = "1.1.0";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         internal BepInEx.Logging.ManualLogSource logger;
@@ -17,7 +17,7 @@ namespace HideStats_plugin
         void Awake()
         {
             logger = BepInEx.Logging.Logger.CreateLogSource(modName);
-            harmony.PatchAll(typeof(HideStatsPlugin));
+            harmony.PatchAll(typeof(CleanBattlefieldPlugin));
             harmony.PatchAll(typeof(BattleUIPatch));
 
             logger.LogInfo($"Plugin {modName} ({modGUID}) is loaded!");

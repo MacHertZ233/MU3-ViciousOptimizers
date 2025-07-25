@@ -10,8 +10,13 @@ So far, the collection includes:
 + ***ExtendOffset***: Extends the adjustment range of offset A & B from ±2.0 to ±10.0.
 + ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
 + ***MuteEnemySound***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
-    + ***MuteEnemySoundLite***: Eliminates enemies' vocals only. For those who want to get their battle progress on audio.
-+ ***HideStats***: Hides player panel on the left and enemy panel on the right in battle. Also hides damage numbers.
++ ***CleanBattlefield***: Optionally hides several elements of the battle interface, including:
+    + Player panel on the left
+    + Enemy panel on the right
+    + Battle retire information below player panel
+    + Skills information at the bottom
+    + Hundred Combo effects at the top
+    + Damage numbers near enemies
 
 ## Dependencies
 
@@ -23,7 +28,12 @@ There are 2 ways to install each mod. Just choose between one of them.
 + **Plugin Method**: Put `<ModName>_plugin.dll` into `BepInEx\plugins` folder.
 + **MonoMod Method**: Put `Assembly-CSharp.<ModName>.mm.dll` into `BepInEx\monomod` folder.
 
-For *ExtendOffset*, there is also a final solution, which is to replace `package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
+For *ExtendOffset*, there is also a final solution, which is to replace `<MU3_game_path>\package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
+
+## Settings Modification
+Put `mu3-VO.ini` into `<MU3_game_path>\package` folder, and modify the value (0 or 1) of each setting in the ini file as needed before launching the game.
+
+Currently only *CleanBattlefield* supports settings changes in this way. More instructions are still in progress.
 
 ## Supported Game Versions
 
@@ -37,8 +47,6 @@ For *ExtendOffset*, there is also a final solution, which is to replace `package
 
 + When *ExtendOffset* is used, and offset A ia adjusted to a larger value (whether positive or negative), the cue ticks before the music starts will noticeably deviate from the music.
     + Using *ShiftSECount* will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
-
-+ *HideStats* does not hide Battle Retire info.
 
 ## Build from Source
 
