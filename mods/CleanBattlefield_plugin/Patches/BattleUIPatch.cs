@@ -2,21 +2,13 @@
 using MU3;
 using MU3.Battle;
 using UnityEngine;
+using VO;
 
 namespace CleanBattlefield_plugin.Patches
 {
     [HarmonyPatch(typeof(BattleUI))]
     public class BattleUIPatch
     {
-        [System.Runtime.InteropServices.DllImport("kernel32")]
-        private static extern int GetPrivateProfileString(
-            string section,
-            string key,
-            string def,
-            System.Text.StringBuilder retVal,
-            int size,
-            string filePath);
-
         private static int config = 0;
 
         [HarmonyPostfix]
@@ -43,7 +35,7 @@ namespace CleanBattlefield_plugin.Patches
 
         private static void parseConfig()
         {
-            System.Text.StringBuilder temp = new System.Text.StringBuilder(255);
+            IniParser reader = new IniParser(".\\mu3-VO.ini");
             System.Collections.ArrayList list = new System.Collections.ArrayList();
             config = 0;
 
@@ -55,13 +47,8 @@ namespace CleanBattlefield_plugin.Patches
             list.Add("ShowDamageNumbers");
 
             foreach (string key in list)
-            {
-                System.Console.WriteLine("Parsing: " + key);
-                GetPrivateProfileString("CleanBattlefield", key, "", temp, 255, ".\\mu3-VO.ini");
-                System.Console.WriteLine("Parsed value: " + temp.ToString());
-                config = (config << 1) + int.Parse(temp.ToString());
-                temp.Clear();
-            }
+                config = (config << 1) + int.Parse(reader.ReadValue("CleanBattlefield", key));
+
             list.Clear();
         }
     }

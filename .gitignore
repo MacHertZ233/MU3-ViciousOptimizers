@@ -5,6 +5,6 @@ lib/
 docs/
 bin/
 
-*/.vs/
-*/obj/
-*/bin/
+mods/*/.vs/
+mods/*/obj/
+mods/*/bin/

@@ -1,19 +1,11 @@
 ﻿using MU3.Battle;
 using UnityEngine;
+using VO;
 
 namespace MU3
 {
     public class patch_BattleUI : BattleUI
     {
-        [System.Runtime.InteropServices.DllImport("kernel32")]
-        private static extern int GetPrivateProfileString(
-            string section,
-            string key,
-            string def,
-            System.Text.StringBuilder retVal,
-            int size,
-            string filePath);
-
         private UIPlayerInfo _playerInfo;
         private UIEnemyInfo _enemyInfo;
         private UIRetireInfo _retireInfo;
@@ -45,7 +37,7 @@ namespace MU3
 
         private static void parseConfig()
         {
-            System.Text.StringBuilder temp = new System.Text.StringBuilder(255);
+            IniParser reader = new IniParser(".\\mu3-VO.ini");
             System.Collections.ArrayList list = new System.Collections.ArrayList();
             config = 0;
 
@@ -57,11 +49,8 @@ namespace MU3
             list.Add("ShowDamageNumbers");
 
             foreach (string key in list)
-            {
-                GetPrivateProfileString("CleanBattlefield", key, "", temp, 255, ".\\mu3-VO.ini");
-                config = config << 1 + int.Parse(temp.ToString());
-                temp.Clear();
-            }
+                config = (config << 1) + int.Parse(reader.ReadValue("CleanBattlefield", key));
+
             list.Clear();
         }
     }

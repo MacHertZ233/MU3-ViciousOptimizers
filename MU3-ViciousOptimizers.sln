@@ -3,25 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_monomod", "ExtendOffset_monomod\ExtendOffset_monomod.csproj", "{FBEE20BB-B5B5-426B-806C-D46354E9B4A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_monomod", "mods\ExtendOffset_monomod\ExtendOffset_monomod.csproj", "{FBEE20BB-B5B5-426B-806C-D46354E9B4A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_monomod", "ShiftSECount_monomod\ShiftSECount_monomod.csproj", "{715C3A87-0EA6-4F72-B6AF-1F3BC26A44D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_monomod", "mods\ShiftSECount_monomod\ShiftSECount_monomod.csproj", "{715C3A87-0EA6-4F72-B6AF-1F3BC26A44D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_plugin", "ExtendOffset_plugin\ExtendOffset_plugin.csproj", "{6DDE9CB8-CA51-483F-A12D-A79B877156B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_plugin", "mods\ExtendOffset_plugin\ExtendOffset_plugin.csproj", "{6DDE9CB8-CA51-483F-A12D-A79B877156B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_plugin", "ShiftSECount_plugin\ShiftSECount_plugin.csproj", "{80780A07-41F2-4933-BB91-F2A6F40AFA63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_plugin", "mods\ShiftSECount_plugin\ShiftSECount_plugin.csproj", "{80780A07-41F2-4933-BB91-F2A6F40AFA63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_monomod", "MuteEnemySound_monomod\MuteEnemySound_monomod.csproj", "{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_monomod", "mods\MuteEnemySound_monomod\MuteEnemySound_monomod.csproj", "{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_plugin", "MuteEnemySound_plugin\MuteEnemySound_plugin.csproj", "{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_plugin", "mods\MuteEnemySound_plugin\MuteEnemySound_plugin.csproj", "{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySoundLite_monomod", "MuteEnemySoundLite_monomod\MuteEnemySoundLite_monomod.csproj", "{0783B1FF-4570-4925-BFF9-81A23F175C8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySoundLite_monomod", "mods\MuteEnemySoundLite_monomod\MuteEnemySoundLite_monomod.csproj", "{0783B1FF-4570-4925-BFF9-81A23F175C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySoundLite_plugin", "MuteEnemySoundLite_plugin\MuteEnemySoundLite_plugin.csproj", "{F89D5E0D-856A-4008-87C4-388AE389D0A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySoundLite_plugin", "mods\MuteEnemySoundLite_plugin\MuteEnemySoundLite_plugin.csproj", "{F89D5E0D-856A-4008-87C4-388AE389D0A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_plugin", "CleanBattlefield_plugin\CleanBattlefield_plugin.csproj", "{378C0EDE-6241-4096-A211-80DCF6B26EDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_plugin", "mods\CleanBattlefield_plugin\CleanBattlefield_plugin.csproj", "{378C0EDE-6241-4096-A211-80DCF6B26EDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_monomod", "CleanBattlefield_monomod\CleanBattlefield_monomod.csproj", "{33007EAD-9AF8-447E-B76F-7FDF3AED67B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_monomod", "mods\CleanBattlefield_monomod\CleanBattlefield_monomod.csproj", "{33007EAD-9AF8-447E-B76F-7FDF3AED67B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vo-util", "vo-util", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		vo-util\Ini.cs = vo-util\Ini.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mods", "mods", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +79,18 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FBEE20BB-B5B5-426B-806C-D46354E9B4A7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{715C3A87-0EA6-4F72-B6AF-1F3BC26A44D0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6DDE9CB8-CA51-483F-A12D-A79B877156B8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{80780A07-41F2-4933-BB91-F2A6F40AFA63} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1A52DF82-C458-4CC0-A9CF-C5557D3D2141} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0783B1FF-4570-4925-BFF9-81A23F175C8C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F89D5E0D-856A-4008-87C4-388AE389D0A0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{378C0EDE-6241-4096-A211-80DCF6B26EDF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{33007EAD-9AF8-447E-B76F-7FDF3AED67B9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A5132C8-5508-4EE0-B894-AD1EEEDC70C3}
