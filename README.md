@@ -28,7 +28,7 @@ There are 2 ways to install each mod. Just choose between one of them.
 + **Plugin Method**: Put `<ModName>_plugin.dll` into `BepInEx\plugins` folder.
 + **MonoMod Method**: Put `Assembly-CSharp.<ModName>.mm.dll` into `BepInEx\monomod` folder.
 
-For *ExtendOffset*, there is also a final solution, which is to replace `<MU3_game_path>\package\mu3_Data\Managed\Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
+For *ExtendOffset*, there is also a final solution, which is to replace the game's `Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
 
 ## Settings Modification
 Put `mu3-VO.ini` into `<MU3_game_path>\package` folder, and modify the value (0 or 1) of each setting in the ini file as needed before launching the game.
@@ -50,17 +50,7 @@ Currently only *CleanBattlefield* supports settings changes in this way. More in
 
 ## Build from Source
 
-1. Put the following files into `.\lib` folder. They can be retrieved from `<MU3_game_path>\package\mu3_Data\Managed` and `BepInEx\core`. 
-```
-AMDaemon.NET.dll
-Assembly-CSharp.dll
-Assembly-CSharp-firstpass.dll
-UnityEngine.dll
-UnityEngine.UI.dll
-
-BepInEx.dll
-0Harmony.dll
-```
+1. Put `Assembly-CSharp.dll` into `.\lib` folder. It can be retrieved from `<MU3_game_path>\package\mu3_Data\Managed`. 
 
 2. Open the solution with Visual Studio (preferably VS2022) and build all projects.
 

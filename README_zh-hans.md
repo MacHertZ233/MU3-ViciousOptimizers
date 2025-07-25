@@ -27,7 +27,7 @@
 + **插件方法**：把`<mod名称>_plugin.dll`放入`BepInEx\plugins`文件夹中。
 + **MonoMod方法**：把`Assembly-CSharp.<mod名称>.mm.dll`放入`BepInEx\monomod`文件夹中。
 
-对于ExtendOffset，还有一种最终方案，即是把`<MU3游戏路径>\package\mu3_Data\Managed\Assembly-CSharp.dll`用`Assembly-CSharp-offset10.dll`覆盖掉。注意注意！务必在当且仅当以上两种方法都不可行时再使用此方法。
+对于ExtendOffset，还有一种最终方案，即是把游戏的`Assembly-CSharp.dll`用`Assembly-CSharp-offset10.dll`覆盖掉。注意注意！务必在当且仅当以上两种方法都不可行时再使用此方法。
 
 ## 设置修改
 把`mu3-VO.ini`放入`<MU3_game_path>\package`文件夹中，然后在运行游戏前，根据需要修改ini文件中每个设置的值（0 或 1）。
@@ -49,17 +49,7 @@
 
 ## 从源代码构建
 
-1. 把以下的文件放入`.\lib`文件夹中。它们都可以从`<MU3游戏路径>\package\mu3_Data\Managed`和`BepInEx\core`中获取。
-```
-AMDaemon.NET.dll
-Assembly-CSharp.dll
-Assembly-CSharp-firstpass.dll
-UnityEngine.dll
-UnityEngine.UI.dll
-
-BepInEx.dll
-0Harmony.dll
-```
+1. 把`Assembly-CSharp.dll`放入`.\lib`文件夹中。它可以从`<MU3游戏路径>\package\mu3_Data\Managed`中获取。
 
 2. 用Visual Studio（最好是VS2022）打开解决方案并构建所有项目。
 
