@@ -21,11 +21,11 @@ namespace MU3
 
             parseConfig();
 
-            if ((config & 32) == 0) _playerInfo.gameObject.SetActive(false);
-            if ((config & 16) == 0) _enemyInfo.gameObject.SetActive(false);
-            if ((config & 8) == 0) _retireInfo.gameObject.SetActive(false);
-            if ((config & 4) == 0) _cardInfo.gameObject.SetActive(false);
-            if ((config & 2) == 0) _comboInfo.gameObject.SetActive(false);
+            _playerInfo.gameObject.SetActive((config & 32) != 0);
+            _enemyInfo.gameObject.SetActive((config & 16) != 0);
+            _retireInfo.gameObject.SetActive((config & 8) != 0);
+            _cardInfo.gameObject.SetActive((config & 4) != 0);
+            _comboInfo.gameObject.SetActive((config & 2) != 0);
         }
 
         public new void playEnemyDamage(Vector3 posWorld, Vector2 posScreenOffset, ColorEnemyDamage color, SizeEnemyDamage size, int damage, float scale)

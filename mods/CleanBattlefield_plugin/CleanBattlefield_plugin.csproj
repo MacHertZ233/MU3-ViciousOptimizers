@@ -60,6 +60,7 @@
     <Compile Include="..\..\vo-util\Ini.cs">
       <Link>Ini.cs</Link>
     </Compile>
+    <Compile Include="Patches\ANM_PLY_Cardinfo_00Patch.cs" />
     <Compile Include="Patches\BattleUIPatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
