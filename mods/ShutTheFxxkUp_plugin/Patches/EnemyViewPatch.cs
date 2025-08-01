@@ -1,7 +1,9 @@
 ﻿using HarmonyLib;
 using MU3.Battle;
+using MU3.Sound;
+using MU3.Util;
 
-namespace MuteEnemySound_plugin.Patches
+namespace ShutTheFxxkUp_plugin.Patches
 {
     [HarmonyPatch(typeof(EnemyView))]
     public class EnemyViewPatch
@@ -13,7 +15,8 @@ namespace MuteEnemySound_plugin.Patches
             
             __instance.damage(); 
             Traverse.Create(__instance).Method("createEffect", AssetAssign.NoteEffect.Type.explosionBoss).GetValue();
-            // Singleton<SoundManager>.instance.play(19);
+            if (BattleUIPatch.playSE)
+                Singleton<SoundManager>.instance.play(19);
 
             return false;
         }

@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_plugin", "mods
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_plugin", "mods\ShiftSECount_plugin\ShiftSECount_plugin.csproj", "{80780A07-41F2-4933-BB91-F2A6F40AFA63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_monomod", "mods\MuteEnemySound_monomod\MuteEnemySound_monomod.csproj", "{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutTheFxxkUp_monomod", "mods\ShutTheFxxkUp_monomod\ShutTheFxxkUp_monomod.csproj", "{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuteEnemySound_plugin", "mods\MuteEnemySound_plugin\MuteEnemySound_plugin.csproj", "{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutTheFxxkUp_plugin", "mods\ShutTheFxxkUp_plugin\ShutTheFxxkUp_plugin.csproj", "{46EB9B7F-E001-4ADB-81C3-89D2A3D0D33E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBattlefield_plugin", "mods\CleanBattlefield_plugin\CleanBattlefield_plugin.csproj", "{378C0EDE-6241-4096-A211-80DCF6B26EDF}"
 EndProject

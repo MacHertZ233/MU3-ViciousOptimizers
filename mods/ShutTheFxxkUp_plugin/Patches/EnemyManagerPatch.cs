@@ -4,11 +4,13 @@ using MU3.Battle;
 using MU3.DataStudio;
 using MU3.DB;
 using MU3.Notes;
+using MU3.Sound;
+using MU3.Util;
 using System.Collections.Generic;
 using UnityEngine;
 using static MU3.Battle.EnemyManager;
 
-namespace MuteEnemySound_plugin.Patches
+namespace ShutTheFxxkUp_plugin.Patches
 {
     [HarmonyPatch(typeof(EnemyManager))]
     public class EnemyManagerPatch
@@ -68,10 +70,12 @@ namespace MuteEnemySound_plugin.Patches
                     }
                     AttributeType attr = waveDetailData2.attr;
                     gameEngine.startWaveShiftEffect(attrBef, attr);
-                    //Singleton<SoundManager>.instance.play(45);
+                    if(BattleUIPatch.playSE)
+                        Singleton<SoundManager>.instance.play(45);
                     if (flag)
                     {
-                        //Singleton<SoundManager>.instance.play(54);
+                        if (BattleUIPatch.playSE)
+                            Singleton<SoundManager>.instance.play(54);
                         int bossVoiceNo = musicData.bossVoiceNo;
                         if (bossVoiceNo <= 1)
                         {
@@ -174,7 +178,8 @@ namespace MuteEnemySound_plugin.Patches
             int waveCount = ((wave != __instance.waveBossID) ? wave : 0);
             list = battleReward.pickDestroyReward(battlePhase, waveCount, set);
             battleReward.getReward(list);
-            //Singleton<SoundManager>.instance.play(92);
+            if (BattleUIPatch.playSE)
+                Singleton<SoundManager>.instance.play(92);
             bool flag = false;
             bool flag2 = false;
             foreach (DestroyReward item in list)
@@ -189,13 +194,13 @@ namespace MuteEnemySound_plugin.Patches
                         break;
                 }
             }
-            if (flag)
+            if (flag && BattleUIPatch.playSE)
             {
-                //Singleton<SoundManager>.instance.play(71);
+                Singleton<SoundManager>.instance.play(71);
             }
-            if (flag2)
+            if (flag2 && BattleUIPatch.playSE)
             {
-                //Singleton<SoundManager>.instance.play(23);
+                Singleton<SoundManager>.instance.play(23);
             }
 
             return false;

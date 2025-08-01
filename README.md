@@ -11,7 +11,7 @@ So far, the collection includes:
 
 + ***ExtendOffset***: Extends the adjustment range of offset A & B from ±2.0 to ±10.0.
 + ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
-+ ***MuteEnemySound***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
++ ***ShutTheFxxkUp***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
 + ***CleanBattlefield***: Optionally hides several elements of the battle interface, including:
   + Player panel on the left
   + Enemy panel on the right

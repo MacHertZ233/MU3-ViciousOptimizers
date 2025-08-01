@@ -1,7 +1,9 @@
 ﻿using HarmonyLib;
 using MU3;
+using MU3.Util;
+using MU3.Sound;
 
-namespace MuteEnemySound_plugin.Patches
+namespace ShutTheFxxkUp_plugin.Patches
 {
     [HarmonyPatch(typeof(UIEnemyInfo))]
     public class UIEnemyInfoPatch
@@ -25,7 +27,8 @@ namespace MuteEnemySound_plugin.Patches
             if (flag)
             {
                 ____enemyLife.isDefeated = true;
-                //Singleton<SoundManager>.instance.play(52);
+                if (BattleUIPatch.playSE) 
+                    Singleton<SoundManager>.instance.play(52);
             }
 
             return false;

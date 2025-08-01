@@ -3,9 +3,10 @@
 using HarmonyLib;
 using MU3.Battle;
 using MU3.Util;
+using MU3.Sound;
 using System.Collections.Generic;
 
-namespace MuteEnemySound_plugin.Patches
+namespace ShutTheFxxkUp_plugin.Patches
 {
     [HarmonyPatch(typeof(BattleReward))]
     public class BattleRewardPatch
@@ -21,7 +22,8 @@ namespace MuteEnemySound_plugin.Patches
             _destroyRewardCount++;
             Reward reward = BattleReward.calcRewards(_destroyRewards);
             SingletonMonoBehaviour<GameEngine>.instance.battleUI.getReward(_destroyRewardCount, reward.jewelBox, reward.moneyBox);
-            //Singleton<SoundManager>.instance.play(92);
+            if (BattleUIPatch.playSE)
+                Singleton<SoundManager>.instance.play(92);
 
             return false;
         }
