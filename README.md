@@ -11,7 +11,7 @@ So far, the collection includes:
 
 + ***ExtendOffset***: Extends the adjustment range of offset A & B from ±2.0 to ±10.0.
 + ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
-+ ***ShutTheFxxkUp***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
++ ***MuteEnemySound***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
 + ***CleanBattlefield***: Optionally hides several elements of the battle interface, including:
   + Player panel on the left
   + Enemy panel on the right
@@ -46,7 +46,7 @@ Currently only *CleanBattlefield* supports settings changes in this way. More in
 
 ## Known Issues
 
-+ The MonoMod version of *ExtendOffset* is currently incompatible with [*MoreProfileOptions*](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/).
++ The MonoMod version of *ExtendOffset* is currently incompatible with [*MoreProfileOptions*](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/). Specifically, when using both of them at the same time, the adjustable range of offset A & B will possibly be locked between -10.0 and -6.0.
   + The Plugin version released lately is expected to address this issue, but still lacks more testing.
   + A modded `Assembly-CSharp-offset10.dll` will be provided as a final workaround.
 

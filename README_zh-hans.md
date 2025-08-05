@@ -11,7 +11,7 @@
 
 + **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0。
 + **ShiftSECount**：消除音乐播放前的提示音与音乐的节奏之间的时间差距（如果开发团队没把对音搞砸的话）。
-+ **ShutTheFxxkUp**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
++ **MuteEnemySound**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
 + **CleanBattlefield**：可选隐藏战斗界面中的若干元素，包括：
   + 左侧的玩家面板
   + 右侧的敌人面板
@@ -46,7 +46,7 @@
 
 ## 已知问题
 
-+ MonoMod版本的ExtendOffset目前与[MoreProfileOptions](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/)不兼容。
++ MonoMod版本的ExtendOffset目前与[MoreProfileOptions](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/)不兼容。具体体现为：当同时使用上述两个mod时，A和B延迟的可调整范围可能会被锁死在-10.0至-6.0。
   + 最新发布的插件版本旨在解决这一问题，但仍欠缺更多测试。
   + 作为最终替代方案，将会提供一个修改过后的`Assembly-CSharp-offset10.dll` 。
 
