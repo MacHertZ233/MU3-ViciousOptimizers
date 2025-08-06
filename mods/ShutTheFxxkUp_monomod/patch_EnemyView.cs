@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using MU3.Sound;
+using MU3.Util;
+using UnityEngine;
 
 namespace MU3.Battle
 {
@@ -13,7 +15,8 @@ namespace MU3.Battle
         {
             damage();
             createEffect(AssetAssign.NoteEffect.Type.explosionBoss);
-            // Singleton<SoundManager>.instance.play(19);
+            if (patch_BattleUI.playSE)
+                Singleton<SoundManager>.instance.play(19);
         }
     }
 }

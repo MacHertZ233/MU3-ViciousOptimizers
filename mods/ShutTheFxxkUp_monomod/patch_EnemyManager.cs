@@ -1,6 +1,7 @@
 ﻿using MU3.DataStudio;
 using MU3.DB;
 using MU3.Notes;
+using MU3.Sound;
 using MU3.Util;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,10 +69,12 @@ namespace MU3.Battle
                     }
                     AttributeType attr = waveDetailData2.attr;
                     gameEngine.startWaveShiftEffect(attrBef, attr);
-                    //Singleton<SoundManager>.instance.play(45);
+                    if (patch_BattleUI.playSE)
+                        Singleton<SoundManager>.instance.play(45);
                     if (flag)
                     {
-                        //Singleton<SoundManager>.instance.play(54);
+                        if (patch_BattleUI.playSE)
+                            Singleton<SoundManager>.instance.play(54);
                         int bossVoiceNo = musicData.bossVoiceNo;
                         if (bossVoiceNo <= 1)
                         {
@@ -120,7 +123,7 @@ namespace MU3.Battle
 
         private void makeZakoSet(int wave, int set)
         {
-            NotesManager.WaveDetailData wDD = getWDD();
+            NotesManager.WaveDetailData wDD = orig_getWDD();
             if (wDD != null)
             {
                 _randomList.shuffle();
@@ -146,10 +149,7 @@ namespace MU3.Battle
             }
         }
 
-        private NotesManager.WaveDetailData getWDD()
-        {
-            return ntMgr.curWaveDetailData;
-        }
+        private extern NotesManager.WaveDetailData orig_getWDD();
 
         public new void playBossSound(int soundId)
         {
@@ -164,7 +164,8 @@ namespace MU3.Battle
             int waveCount = ((wave != waveBossID) ? wave : 0);
             list = battleReward.pickDestroyReward(battlePhase, waveCount, set);
             battleReward.getReward(list);
-            //Singleton<SoundManager>.instance.play(92);
+            if (patch_BattleUI.playSE)
+                Singleton<SoundManager>.instance.play(92);
             bool flag = false;
             bool flag2 = false;
             foreach (DestroyReward item in list)
@@ -179,13 +180,13 @@ namespace MU3.Battle
                         break;
                 }
             }
-            if (flag)
+            if (flag && patch_BattleUI.playSE)
             {
-                //Singleton<SoundManager>.instance.play(71);
+                Singleton<SoundManager>.instance.play(71);
             }
-            if (flag2)
+            if (flag2 && patch_BattleUI.playSE)
             {
-                //Singleton<SoundManager>.instance.play(23);
+                Singleton<SoundManager>.instance.play(23);
             }
         }
     }

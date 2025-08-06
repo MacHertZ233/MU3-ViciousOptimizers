@@ -71,7 +71,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\vo-util\Ini.cs">
+      <Link>Ini.cs</Link>
+    </Compile>
     <Compile Include="patch_BattleReward.cs" />
+    <Compile Include="patch_BattleUI.cs" />
     <Compile Include="patch_EnemyManager.cs" />
     <Compile Include="patch_EnemyView.cs" />
     <Compile Include="patch_UIEnemyInfo.cs" />

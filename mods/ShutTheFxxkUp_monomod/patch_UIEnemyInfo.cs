@@ -1,4 +1,8 @@
-﻿namespace MU3
+﻿using MU3.Battle;
+using MU3.Sound;
+using MU3.Util;
+
+namespace MU3
 {
     internal class patch_UIEnemyInfo : UIEnemyInfo
     {
@@ -27,51 +31,25 @@
                 _lifeValue = value;
                 if (value > 0 || mode == Mode.Zako)
                 {
-                    setDispMode(DispMode.LifeGauge);
-                    updateLifeGauge();
+                    orig_setDispMode(DispMode.LifeGauge);
+                    orig_updateLifeGauge();
                 }
                 else
                 {
-                    setDispMode(DispMode.Overkill);
-                    updateOverDamageGauge();
+                    orig_setDispMode(DispMode.Overkill);
+                    orig_updateOverDamageGauge();
                 }
                 if (flag)
                 {
                     _enemyLife.isDefeated = true;
-                    //Singleton<SoundManager>.instance.play(52);
+                    if (patch_BattleUI.playSE)
+                        Singleton<SoundManager>.instance.play(52);
                 }
             }
         }
 
-        private void setDispMode(DispMode dispMode)
-        {
-            if (_dispMode != dispMode)
-            {
-                switch (dispMode)
-                {
-                    case DispMode.LifeGauge:
-                        _enemyLife.isDefeated = false;
-                        break;
-                    case DispMode.Overkill:
-                        _enemyLife.isDefeated = true;
-                        break;
-                }
-                _dispMode = dispMode;
-                updateOverDamageDisp();
-            }
-        }
-        private void updateLifeGauge()
-        {
-            _hpGauge.setValue(0.01f * (float)_lifeValue);
-        }
-        private void updateOverDamageGauge()
-        {
-            float overDamageValue = ((_lifeValue <= 0) ? (-0.01f * (float)_lifeValue) : (-1f));
-            _overDamage.overDamageValue = overDamageValue;
-        }
-        private void updateOverDamageDisp()
-        {
-            _overDamage.isIn = state == State.In && _dispMode == DispMode.Overkill;
-        }
+        private extern void orig_setDispMode(DispMode dispMode);
+        private extern void orig_updateLifeGauge();
+        private extern void orig_updateOverDamageGauge();
     }
 }

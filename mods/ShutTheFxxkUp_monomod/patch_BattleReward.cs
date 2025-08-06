@@ -1,5 +1,6 @@
 ﻿// excessive modification?
 
+using MU3.Sound;
 using MU3.Util;
 using System.Collections.Generic;
 
@@ -15,7 +16,8 @@ namespace MU3.Battle
             _destroyRewardCount++;
             Reward reward = calcRewards(_destroyRewards);
             SingletonMonoBehaviour<GameEngine>.instance.battleUI.getReward(_destroyRewardCount, reward.jewelBox, reward.moneyBox);
-            //Singleton<SoundManager>.instance.play(92);
+            if (patch_BattleUI.playSE)
+                Singleton<SoundManager>.instance.play(92);
         }
     }
 }
