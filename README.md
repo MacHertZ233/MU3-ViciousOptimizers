@@ -11,14 +11,8 @@ So far, the collection includes:
 
 + ***ExtendOffset***: Extends the adjustment range of offset A & B from ±2.0 to ±10.0.
 + ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
-+ ***MuteEnemySound***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
-+ ***CleanBattlefield***: Optionally hides several elements of the battle interface, including:
-  + Player panel on the left
-  + Enemy panel on the right
-  + Battle retire information below player panel
-  + Skills information at the bottom
-  + Hundred Combo effects at the top
-  + Damage numbers near enemies
++ ***ShutTheFxxkUp***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
++ ***CleanBattlefield***: Optionally hides several elements of the battle interface. See [here](doc/IniSpecification.md) for details.
 
 ## Dependencies
 
@@ -38,7 +32,7 @@ For *ExtendOffset*, there is also a final solution, which is to replace the game
 
 Put `mu3-VO.ini` into `<MU3_game_path>\package` folder, and modify the value (0 or 1) of each setting in the ini file as needed before launching the game.
 
-Currently only *CleanBattlefield* supports settings changes in this way. More instructions are still in progress.
+Currently *CleanBattlefield* and *ShutTheFxxkUp* supports settings changes in this way. For detailed specifications, please refer [here](doc/IniSpecification.md).
 
 ## Supported Game Versions
 
@@ -53,7 +47,7 @@ Currently only *CleanBattlefield* supports settings changes in this way. More in
 + When *ExtendOffset* is used, and offset A ia adjusted to a larger value (whether positive or negative), the cue ticks before the music starts will noticeably deviate from the music.
   + Using *ShiftSECount* will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
 
-+ *CleanBattlefield* does not hide skills info in the final score page.
++ The MonoMod version of *CleanBattlefield* does not hide skills info in the final score page.
 
 ## Build from Source
 

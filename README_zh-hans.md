@@ -11,14 +11,8 @@
 
 + **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0。
 + **ShiftSECount**：消除音乐播放前的提示音与音乐的节奏之间的时间差距（如果开发团队没把对音搞砸的话）。
-+ **MuteEnemySound**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
-+ **CleanBattlefield**：可选隐藏战斗界面中的若干元素，包括：
-  + 左侧的玩家面板
-  + 右侧的敌人面板
-  + 位于玩家面板下方的战斗中止（BATTLE RETIRE）信息
-  + 底部卡牌技能信息
-  + 顶部整百COMBO特效
-  + 敌人附近的伤害数字
++ **ShutTheFxxkUp**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
++ **CleanBattlefield**：可选隐藏战斗界面中的若干元素。详见[此处](doc/IniSpecification_zh-hans.md)。
 
 ## 依赖
 
@@ -38,7 +32,7 @@
 
 把`mu3-VO.ini`放入`<MU3游戏路径>\package`文件夹中，然后在运行游戏前，根据需要修改ini文件中每个设置的值（0 或 1）。
 
-目前只有CleanBattlefield支持以这种方式更改设置。更多说明文档内容仍在编写中。
+目前CleanBattlefield和ShutTheFxxkUp支持以这种方式更改设置。关于详细说明，请参照[此处](doc/IniSpecification_zh-hans.md)。
 
 ## 支持的游戏版本
 
@@ -48,12 +42,12 @@
 
 + MonoMod版本的ExtendOffset目前与[MoreProfileOptions](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/)不兼容。具体体现为：当同时使用上述两个mod时，A和B延迟的可调整范围可能会被锁死在-10.0至-6.0。
   + 最新发布的插件版本旨在解决这一问题，但仍欠缺更多测试。
-  + 作为最终替代方案，将会提供一个修改过后的`Assembly-CSharp-offset10.dll` 。
+  + 一个修改过后的`Assembly-CSharp-offset10.dll`，将会作为最终替代方案提供。
 
 + 当使用ExtendOffset，并将A延迟调整到较大的数值时（无论正负），音乐开始前的提示音会明显偏离音乐节奏。
   + 使用ShiftSECount可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
 
-+ CleanBattlefield无法隐藏成绩结算界面的卡牌技能信息。
++ MonoMod版本的CleanBattlefield无法隐藏成绩结算界面的卡牌技能信息。
 
 ## 从源代码构建
 

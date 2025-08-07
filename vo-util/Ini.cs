@@ -20,7 +20,7 @@ namespace VO
             this.iniPath = path;
 		}
 
-        public string ReadValue(string section, string key, string def = "")
+        public string ReadValue(string section, string key, string def = "0")
         {
             System.Text.StringBuilder retVal = new System.Text.StringBuilder(255);
             GetPrivateProfileString(section, key, def, retVal, retVal.Capacity, iniPath);
