@@ -4,7 +4,7 @@ using MU3.Util;
 
 namespace MU3
 {
-    internal class patch_UIEnemyInfo : UIEnemyInfo
+    public class patch_UIEnemyInfo : UIEnemyInfo
     {
         private enum DispMode
         {
@@ -31,13 +31,13 @@ namespace MU3
                 _lifeValue = value;
                 if (value > 0 || mode == Mode.Zako)
                 {
-                    orig_setDispMode(DispMode.LifeGauge);
-                    orig_updateLifeGauge();
+                    setDispMode(DispMode.LifeGauge);
+                    updateLifeGauge();
                 }
                 else
                 {
-                    orig_setDispMode(DispMode.Overkill);
-                    orig_updateOverDamageGauge();
+                    setDispMode(DispMode.Overkill);
+                    updateOverDamageGauge();
                 }
                 if (flag)
                 {
@@ -49,7 +49,19 @@ namespace MU3
         }
 
         private extern void orig_setDispMode(DispMode dispMode);
+        private void setDispMode(DispMode dispMode)
+        {
+            orig_setDispMode(dispMode);
+        }
         private extern void orig_updateLifeGauge();
+        private void updateLifeGauge()
+        {
+            orig_updateLifeGauge();
+        }
         private extern void orig_updateOverDamageGauge();
+        private void updateOverDamageGauge()
+        {
+            orig_updateOverDamageGauge();
+        }
     }
 }

@@ -1,11 +1,6 @@
-﻿using MU3;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using VO;
+﻿using VO;
 
-namespace MU3.Battle
+namespace MU3
 {
     public class patch_BattleUI : BattleUI
     {
@@ -24,6 +19,12 @@ namespace MU3.Battle
             list.Clear();
 
             playSE = (config & 1) != 0;
+        }
+        private extern void orig_Awake();
+        private void Awake()
+        {
+            orig_Awake();
+            parseConfig();
         }
     }
 

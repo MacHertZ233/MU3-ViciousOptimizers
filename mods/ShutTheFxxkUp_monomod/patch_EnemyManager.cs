@@ -123,7 +123,7 @@ namespace MU3.Battle
 
         private void makeZakoSet(int wave, int set)
         {
-            NotesManager.WaveDetailData wDD = orig_getWDD();
+            NotesManager.WaveDetailData wDD = getWDD();
             if (wDD != null)
             {
                 _randomList.shuffle();
@@ -150,6 +150,10 @@ namespace MU3.Battle
         }
 
         private extern NotesManager.WaveDetailData orig_getWDD();
+        private NotesManager.WaveDetailData getWDD()
+        {
+            return orig_getWDD();
+        }
 
         public new void playBossSound(int soundId)
         {
