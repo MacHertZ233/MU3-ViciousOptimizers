@@ -16,6 +16,7 @@ Currently, the following adjustable options are included in `mu3-VO.ini`:
 | CleanBattlefield  | ShowEnemyInfo     | Whether to display the enemy panel on the right (including enemy type, HP, accumulated rewards, etc.) |
 | CleanBattlefield  | ShowRetireInfo    | Whether to display Battle Retirement score info |
 | CleanBattlefield  | ShowCardInfo      | Whether to display skills info at the bottom |
-| CleanBattlefield  | ShowComboInfo     | Whether to display hundred Combo effects at the top |
+| CleanBattlefield  | ShowComboEffects  | Whether to display hundred Combo effects at the top |
 | CleanBattlefield  | ShowDamageNumbers | Whether to display damage numbers near enemies |
+| CleanBattlefield  | ShowBossEffects   | Whether to display Boss entry and defeat effects |
 | ShutTheFxxkUp     | PlaySoundEffects  | Whether to play in-battle sound effects |

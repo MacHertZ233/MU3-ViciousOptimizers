@@ -17,11 +17,11 @@ namespace CleanBattlefield_plugin.Patches
         {
             parseConfig();
 
-            ____playerInfo.gameObject.SetActive((config & 32) != 0);
-            ____enemyInfo.gameObject.SetActive((config & 16) != 0);
-            ____retireInfo.gameObject.SetActive((config & 8) != 0);
-            //____cardInfo.gameObject.SetActive((config & 4) != 0);
-            ____comboInfo.gameObject.SetActive((config & 2) != 0);
+            ____playerInfo.gameObject.SetActive((config & 1) != 0);
+            ____enemyInfo.gameObject.SetActive((config & 2) != 0);
+            ____retireInfo.gameObject.SetActive((config & 4) != 0);
+            //____cardInfo.gameObject.SetActive((config & 8) != 0);
+            ____comboInfo.gameObject.SetActive((config & 16) != 0);
 
         }
 
@@ -29,7 +29,7 @@ namespace CleanBattlefield_plugin.Patches
         [HarmonyPatch("playEnemyDamage")]
         static bool PlayEnemyDamagePrefix(Vector3 posWorld, Vector2 posScreenOffset, ColorEnemyDamage color, SizeEnemyDamage size, int damage, float scale)
         {
-            return (config & 1) != 0;
+            return (config & 32) != 0;
         }
 
         private static void parseConfig()
@@ -38,12 +38,13 @@ namespace CleanBattlefield_plugin.Patches
             System.Collections.ArrayList list = new System.Collections.ArrayList();
             config = 0;
 
-            list.Add("ShowPlayerInfo");
-            list.Add("ShowEnemyInfo");
-            list.Add("ShowRetireInfo");
-            list.Add("ShowCardInfo");
-            list.Add("ShowComboInfo");
+            list.Add("ShowBossEffects");
             list.Add("ShowDamageNumbers");
+            list.Add("ShowComboEffects");
+            list.Add("ShowCardInfo");
+            list.Add("ShowRetireInfo");
+            list.Add("ShowEnemyInfo");
+            list.Add("ShowPlayerInfo");
 
             foreach (string key in list)
                 config = (config << 1) + int.Parse(reader.ReadValue("CleanBattlefield", key));

@@ -13,7 +13,7 @@ namespace CleanBattlefield_plugin.Patches
         static void AwakePostfix(ref ANM_PLY_Cardinfo_00 __instance)
         {
             int config = BattleUIPatch.config;
-            show = (config & 4) != 0;
+            show = (config & 8) != 0;
         }
 
         [HarmonyPrefix]

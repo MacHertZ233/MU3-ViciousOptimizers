@@ -9,7 +9,7 @@ namespace CleanBattlefield_plugin
     {
         const string modGUID = "machertz233.CleanBattlefield";
         const string modName = "CleanBattlefield";
-        const string modVersion = "1.1.1";
+        const string modVersion = "1.1.2";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         internal BepInEx.Logging.ManualLogSource logger;
@@ -21,6 +21,7 @@ namespace CleanBattlefield_plugin
             harmony.PatchAll(typeof(CleanBattlefieldPlugin));
             harmony.PatchAll(typeof(BattleUIPatch));
             harmony.PatchAll(typeof(ANM_PLY_Cardinfo_00Patch));
+            harmony.PatchAll(typeof(GameEnginePatch));
 
             logger.LogInfo($"Plugin {modName} ({modGUID}) is loaded!");
         }

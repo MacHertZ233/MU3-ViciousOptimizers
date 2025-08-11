@@ -16,6 +16,7 @@
 | CleanBattlefield  | ShowEnemyInfo     | 是否显示右侧敌人面板（包含敌人类型、血量、积累的奖励等） |
 | CleanBattlefield  | ShowRetireInfo    | 是否显示战斗中止分数信息 |
 | CleanBattlefield  | ShowCardInfo      | 是否显示底部卡牌技能信息 |
-| CleanBattlefield  | ShowComboInfo     | 是否显示顶部整百COMBO特效 |
+| CleanBattlefield  | ShowComboEffects  | 是否显示顶部整百COMBO特效 |
 | CleanBattlefield  | ShowDamageNumbers | 是否显示敌人附近的伤害数字 |
+| CleanBattlefield  | ShowBossEffects   | 是否显示BOSS出场和被击败特效 |
 | ShutTheFxxkUp     | PlaySoundEffects  | 是否播放战斗中音效 |
