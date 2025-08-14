@@ -22,6 +22,7 @@ namespace CleanBattlefield_plugin
             harmony.PatchAll(typeof(BattleUIPatch));
             harmony.PatchAll(typeof(ANM_PLY_Cardinfo_00Patch));
             harmony.PatchAll(typeof(GameEnginePatch));
+            harmony.PatchAll(typeof(CharacterViewPatch));
 
             logger.LogInfo($"Plugin {modName} ({modGUID}) is loaded!");
         }

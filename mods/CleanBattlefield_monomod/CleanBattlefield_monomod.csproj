@@ -75,6 +75,7 @@
       <Link>Ini.cs</Link>
     </Compile>
     <Compile Include="patch_BattleUI.cs" />
+    <Compile Include="patch_CharacterView.cs" />
     <Compile Include="patch_GameEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

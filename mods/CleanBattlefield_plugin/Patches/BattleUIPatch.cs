@@ -39,6 +39,7 @@ namespace CleanBattlefield_plugin.Patches
             config = 0;
 
             list.Add("ShowBossEffects");
+            list.Add("ShowZakoEffects");
             list.Add("ShowDamageNumbers");
             list.Add("ShowComboEffects");
             list.Add("ShowCardInfo");

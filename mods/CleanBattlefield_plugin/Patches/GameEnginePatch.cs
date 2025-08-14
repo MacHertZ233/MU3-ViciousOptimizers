@@ -10,14 +10,14 @@ namespace CleanBattlefield_plugin.Patches
         [HarmonyPatch("startWaveShiftEffect")]
         public static bool startWaveShiftEffectPrefix()
         {
-            return (BattleUIPatch.config & 64) != 0;
+            return (BattleUIPatch.config & 128) != 0;
         }
 
         [HarmonyPrefix]
         [HarmonyPatch("startOverkillEffect")]
         public static bool startOverkillEffectPrefix()
         {
-            return (BattleUIPatch.config & 64) != 0;
+            return (BattleUIPatch.config & 128) != 0;
         }
     }
 }

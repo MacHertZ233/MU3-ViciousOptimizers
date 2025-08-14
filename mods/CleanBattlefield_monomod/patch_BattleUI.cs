@@ -42,6 +42,7 @@ namespace MU3
             config = 0;
 
             list.Add("ShowBossEffects");
+            list.Add("ShowZakoEffects");
             list.Add("ShowDamageNumbers");
             list.Add("ShowComboEffects");
             list.Add("ShowCardInfo");

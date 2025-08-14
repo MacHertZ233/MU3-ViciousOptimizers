@@ -11,13 +11,13 @@ namespace MU3.Battle
         public extern void orig_startWaveShiftEffect(AttributeType attrBef, AttributeType attrAft);
         public void startWaveShiftEffect(AttributeType attrBef, AttributeType attrAft)
         {
-            if ((patch_BattleUI.config & 64) != 0) orig_startWaveShiftEffect(attrBef, attrAft);
+            if ((patch_BattleUI.config & 128) != 0) orig_startWaveShiftEffect(attrBef, attrAft);
         }
 
         public extern void orig_startOverkillEffect();
         public void startOverkillEffect()
         {
-            if ((patch_BattleUI.config & 64) != 0) orig_startOverkillEffect();
+            if ((patch_BattleUI.config & 128) != 0) orig_startOverkillEffect();
         }
     }
 }
