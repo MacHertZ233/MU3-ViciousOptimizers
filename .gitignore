@@ -1,5 +1,6 @@
 .git/
 .vs/
+.vscode/
 packages/
 lib/
 bin/

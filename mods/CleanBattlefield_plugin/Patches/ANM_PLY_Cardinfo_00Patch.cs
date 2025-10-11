@@ -18,7 +18,7 @@ namespace CleanBattlefield_plugin.Patches
 
         [HarmonyPrefix]
         [HarmonyPatch("state", MethodType.Setter)]
-        static bool statePostfix(ref ANM_PLY_Cardinfo_00 __instance, ref ANM_PLY_Cardinfo_00.State value)
+        static bool statePrefix(ref ANM_PLY_Cardinfo_00 __instance, ref ANM_PLY_Cardinfo_00.State value)
         {
             __instance.gameObject.SetActive(show);
             return show;
@@ -26,7 +26,7 @@ namespace CleanBattlefield_plugin.Patches
 
         [HarmonyPrefix]
         [HarmonyPatch("Show", MethodType.Setter)]
-        static bool ShowPostfix(ref ANM_PLY_Cardinfo_00 __instance, ref bool value)
+        static bool ShowPrefix(ref ANM_PLY_Cardinfo_00 __instance, ref bool value)
         {
             __instance.gameObject.SetActive(show);
             return show;

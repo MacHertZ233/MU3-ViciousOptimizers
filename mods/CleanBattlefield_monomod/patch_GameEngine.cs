@@ -1,8 +1,4 @@
 ﻿using MU3.DataStudio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MU3.Battle
 {
