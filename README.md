@@ -47,7 +47,7 @@ Currently *CleanBattlefield* and *ShutTheFxxkUp* supports settings changes in th
 + When *ExtendOffset* is used, and offset A ia adjusted to a larger value (whether positive or negative), the cue ticks before the music starts will noticeably deviate from the music.
   + Using *ShiftSECount* will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
 
-+ (Fixing & Testing) The MonoMod version of *CleanBattlefield* does not hide skills info in the final score page.
++ When playing in guest mode or using a newly registered account, *ExtendOffset* will cause offset A & B to have a default value of -8.0.
 
 ## Build from Source
 
