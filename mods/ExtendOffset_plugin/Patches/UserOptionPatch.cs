@@ -13,6 +13,14 @@ namespace ExtendOffset_plugin.Patches
         [HarmonyPatch(typeof(DataSet))]
         public class DataSetPatch
         {
+            [HarmonyPostfix]
+            [HarmonyPatch(typeof(DataSet), MethodType.Constructor)]
+            static void ConstructorPostfix(ref DataSet __instance)
+            {
+                Traverse.Create(__instance).Field("timing").SetValue(100);
+                Traverse.Create(__instance).Field("judgeAdjustment").SetValue(100);
+            }
+
             [HarmonyPrefix]
             [HarmonyPatch(typeof(DataSet), nameof(DataSet.Timing), MethodType.Setter)]
             static bool TimingSetterPrefix(ref UserOption.eTiming value, ref DataSet __instance)

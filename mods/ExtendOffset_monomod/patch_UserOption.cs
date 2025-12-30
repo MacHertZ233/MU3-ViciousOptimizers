@@ -32,7 +32,17 @@ namespace MU3.User
 
         class patch_DataSet : DataSet
         {
-            private eTiming timing;
+            public extern void orig_ctor();
+
+            [MonoModConstructor]
+            public void ctor()
+            {
+                orig_ctor();
+                timing = (eTiming)100;
+                judgeAdjustment = (eTiming)100;
+            }
+
+            private eTiming timing = (eTiming)100;
             public new eTiming Timing
             {
                 get
@@ -55,7 +65,7 @@ namespace MU3.User
                 }
             }
 
-            private eTiming judgeAdjustment;
+            private eTiming judgeAdjustment = (eTiming)100;
             public new eTiming JudgeAdjustment
             {
                 get
