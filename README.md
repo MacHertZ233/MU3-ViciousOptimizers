@@ -10,7 +10,7 @@ Evil enough, and useful enough.
 So far, the collection includes:
 
 + ***ExtendOffset***: Extends the adjustment range of offset A & B from ±2.0 to ±10.0.
-+ ***ShiftSECount***: Makes the cue ticks before the music more aligned with the music rhythm (if the dev team doesn't screw up the audio alignment).
++ ***GuideSEOffset***: Allows the offset for Guide Sound Effects to be adjusted independently, unaffected by offset A.
 + ***ShutTheFxxkUp***: Eliminates enemies' vocals as well as sound effects that prompt defeat of the enemies, so that the music is never obscured.
 + ***CleanBattlefield***: Optionally hides several elements of the battle interface. See [here](doc/IniSpecification.md) for details.
 
@@ -44,10 +44,8 @@ Currently *CleanBattlefield* and *ShutTheFxxkUp* supports settings changes in th
   + The Plugin version released lately is expected to address this issue, but still lacks more testing.
   + A modded `Assembly-CSharp-offset10.dll` will be provided as a final workaround.
 
-+ When *ExtendOffset* is used, and offset A ia adjusted to a larger value (whether positive or negative), the cue ticks before the music starts will noticeably deviate from the music.
-  + Using *ShiftSECount* will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
-
-+ When playing in guest mode or using a newly registered account, *ExtendOffset* will cause offset A & B to have a default value of -8.0.
++ When *ExtendOffset* is used, and offset A ia adjusted to a larger value (whether positive or negative), the countdown cue ticks before the music starts will noticeably deviate from the music.
+  + Using *GuideSEOffset* and setting OffsetCount to around 0 will mitigate the situation in most cases. But we don't know how well the devs are doing with the audio alignment.
 
 ## Build from Source
 

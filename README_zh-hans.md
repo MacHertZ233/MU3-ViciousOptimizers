@@ -10,7 +10,7 @@
 目前包含了以下mod：
 
 + **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0。
-+ **ShiftSECount**：消除音乐播放前的提示音与音乐的节奏之间的时间差距（如果开发团队没把对音搞砸的话）。
++ **GuideSEOffset**：让正解音的延迟可被单独调整，而不受A延迟的影响。
 + **ShutTheFxxkUp**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
 + **CleanBattlefield**：可选隐藏战斗界面中的若干元素。详见[此处](doc/IniSpecification_zh-hans.md)。
 
@@ -45,9 +45,7 @@
   + 一个修改过后的`Assembly-CSharp-offset10.dll`，将会作为最终替代方案提供。
 
 + 当使用ExtendOffset，并将A延迟调整到较大的数值时（无论正负），音乐开始前的提示音会明显偏离音乐节奏。
-  + 使用ShiftSECount可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
-
-+ 在以游客模式或使用刚刚注册的账号游玩时，ExtendOffset会导致设置中的A/B延迟设置的默认值均为-8.0。
+  + 使用GuideSEOffset，并将OffsetCount设置为0左右，可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
 
 ## 从源代码构建
 
