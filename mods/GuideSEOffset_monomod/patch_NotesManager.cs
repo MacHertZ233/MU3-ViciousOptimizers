@@ -1,4 +1,5 @@
 ﻿using VO;
+using MU3.Game;
 
 namespace MU3.Notes
 {
@@ -21,13 +22,16 @@ namespace MU3.Notes
         private static float offsetCount = 0.0f;
         private static float offsetAnswer = 0.0f;
 
-        public void Awake()
+        // cannot patch "initialize()" and "orig_initialize()", FUCK!
+        // have to find another way instead
+        public extern bool orig_loadScore(SessionInfo sessionInfo, bool isStageDazzling);
+        public bool loadScore(SessionInfo sessionInfo, bool isStageDazzling)
         {
             parseConfig();
+            return orig_loadScore(sessionInfo,isStageDazzling);
         }
 
         public extern void orig_addGuideSE(GuideSEData data);
-
         public void addGuideSE(GuideSEData data)
         {
             if (data.type < NotesManagerSE.GuideSE_MAX)

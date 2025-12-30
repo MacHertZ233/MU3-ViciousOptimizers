@@ -27,10 +27,9 @@ namespace GuideSEOffset_plugin.Patches
         //         }
         //     }
         // }
-
         [HarmonyPostfix]
-        [HarmonyPatch("Awake")]
-        static void AwakePostfix()
+        [HarmonyPatch("initialize")]
+        static void InitializePostfix(ref SessionInfo sessionInfo)
         {
             parseConfig();
         }
