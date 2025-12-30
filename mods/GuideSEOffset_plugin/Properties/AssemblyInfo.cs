@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ShiftSECount")]
+[assembly: AssemblyTitle("GuideSEOffset_plugin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ShiftSECount")]
+[assembly: AssemblyProduct("GuideSEOffset_plugin")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("715c3a87-0ea6-4f72-b6af-1f3bc26a44d0")]
+[assembly: Guid("80780a07-41f2-4933-bb91-f2a6f40afa63")]
 
 // Version information for an assembly consists of the following four values:
 //

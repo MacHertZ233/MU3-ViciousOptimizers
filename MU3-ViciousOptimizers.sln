@@ -5,11 +5,11 @@ VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_monomod", "mods\ExtendOffset_monomod\ExtendOffset_monomod.csproj", "{FBEE20BB-B5B5-426B-806C-D46354E9B4A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_monomod", "mods\ShiftSECount_monomod\ShiftSECount_monomod.csproj", "{715C3A87-0EA6-4F72-B6AF-1F3BC26A44D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuideSEOffset_monomod", "mods\GuideSEOffset_monomod\GuideSEOffset_monomod.csproj", "{715C3A87-0EA6-4F72-B6AF-1F3BC26A44D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendOffset_plugin", "mods\ExtendOffset_plugin\ExtendOffset_plugin.csproj", "{6DDE9CB8-CA51-483F-A12D-A79B877156B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftSECount_plugin", "mods\ShiftSECount_plugin\ShiftSECount_plugin.csproj", "{80780A07-41F2-4933-BB91-F2A6F40AFA63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuideSEOffset_plugin", "mods\GuideSEOffset_plugin\GuideSEOffset_plugin.csproj", "{80780A07-41F2-4933-BB91-F2A6F40AFA63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutTheFxxkUp_monomod", "mods\ShutTheFxxkUp_monomod\ShutTheFxxkUp_monomod.csproj", "{1A52DF82-C458-4CC0-A9CF-C5557D3D2141}"
 EndProject
