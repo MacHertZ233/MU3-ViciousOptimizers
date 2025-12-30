@@ -9,7 +9,7 @@ namespace ExtendOffset_plugin
     {
         const string modGUID = "machertz233.extendoffset";
         const string modName = "ExtendOffset";
-        const string modVersion = "1.0.0";
+        const string modVersion = "1.0.1";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         internal BepInEx.Logging.ManualLogSource logger;
