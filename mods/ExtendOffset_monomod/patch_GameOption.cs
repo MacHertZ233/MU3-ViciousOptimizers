@@ -1,19 +1,43 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Linq;
-using MU3.User;
+using System.Reflection;
+using ExtendOffset_monomod;
+using MU3.Notes;
 
 namespace MU3.Notes
 {
     public class patch_GameOption : GameOption
     {
-        public static ReadOnlyCollection<float> timingTbl = Array.AsReadOnly<float>((from i in Enumerable.Range(0, 201)
-                                                                                     select -10f + (float)i * 0.1f).ToArray<float>());
-        private static float calcTiming(UserOption.eTiming eTiming)
+        private static int GetCode(string fieldName)
         {
-            return timingTbl[(int)eTiming];
+            PropertyInfo opProperty = typeof(GameOption).GetProperty(
+                "op",
+                BindingFlags.Public | BindingFlags.Static);
+
+            if (opProperty == null)
+                return 20;
+
+            object op = opProperty.GetValue(null, null);
+            return OffsetRuntime.GetCode(op, fieldName);
         }
 
-        // Damn, I don't know how to patch the constructor in a static class... 
+        public static float get_timing()
+        {
+            return OffsetRuntime.TimingForCode(GetCode("timing"));
+        }
+
+        public static float get_timingMsec()
+        {
+            return 1000f * get_timing() / 60f;
+        }
+
+        public static float get_judgeAdjustment()
+        {
+            return OffsetRuntime.TimingForCode(
+                GetCode("judgeAdjustment"));
+        }
+
+        public static float get_judgeAdjustmentMsec()
+        {
+            return 1000f * get_judgeAdjustment() / 60f;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using System;
+using BepInEx;
 using ExtendOffset_plugin.Patches;
 using HarmonyLib;
 
@@ -9,7 +10,7 @@ namespace ExtendOffset_plugin
     {
         const string modGUID = "machertz233.extendoffset";
         const string modName = "ExtendOffset";
-        const string modVersion = "1.0.1";
+        const string modVersion = "1.1.0";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         internal BepInEx.Logging.ManualLogSource logger;
@@ -17,14 +18,31 @@ namespace ExtendOffset_plugin
         void Awake()
         {
             logger = BepInEx.Logging.Logger.CreateLogSource(modName);
-            harmony.PatchAll(typeof(ExtendOffsetPlugin));
-            harmony.PatchAll(typeof(GameOptionPatch));
-            harmony.PatchAll(typeof(UserOptionPatch));
-            harmony.PatchAll(typeof(UserOptionPatch.DataSetPatch));
-            harmony.PatchAll(typeof(OptionSelecterControllerPatch));
-            harmony.PatchAll(typeof(OptionMiniSummaryControllerPatch));
 
-            logger.LogInfo($"Plugin {modName} ({modGUID}) is loaded!");
+            try
+            {
+                double range = OffsetConfig.ReadRange();
+                OffsetRuntime.Configure(range);
+
+                logger.LogInfo(
+                    "Offset range: +/-" +
+                    OffsetRuntime.Range.ToString(
+                        "0.0",
+                        System.Globalization.CultureInfo.InvariantCulture));
+
+                harmony.PatchAll(typeof(ExtendOffsetPlugin));
+                harmony.PatchAll(typeof(GameOptionPatch));
+                harmony.PatchAll(typeof(UserOptionPatch));
+                harmony.PatchAll(typeof(OptionSelecterControllerPatch));
+                harmony.PatchAll(typeof(OptionMiniSummaryControllerPatch));
+
+                logger.LogInfo(
+                    $"Plugin {modName} ({modGUID}) is loaded!");
+            }
+            catch (Exception exception)
+            {
+                logger.LogError("ExtendOffset failed: " + exception);
+            }
         }
     }
 }

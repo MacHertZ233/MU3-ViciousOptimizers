@@ -1,22 +1,16 @@
 ﻿using HarmonyLib;
 using MU3.Notes;
-using MU3.User;
-using System;
-using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace ExtendOffset_plugin.Patches
 {
-    [HarmonyPatch(typeof(GameOption))]
-    public class GameOptionPatch
+    [HarmonyPatch(typeof(GameOption), "calcTiming")]
+    internal static class GameOptionPatch
     {
-        public static ReadOnlyCollection<float> timingTbl = Array.AsReadOnly<float>((from i in Enumerable.Range(0, 201)
-                                                                                     select -10f + (float)i * 0.1f).ToArray<float>());
         [HarmonyPrefix]
-        [HarmonyPatch("calcTiming")]
-        static bool calcTimingPrefix(ref float __result, ref UserOption.eTiming eTiming)
+        private static bool Prefix(object[] __args, ref float __result)
         {
-            __result = timingTbl[(int)eTiming];
+            __result = OffsetRuntime.TimingForCode(
+                OffsetRuntime.ToInt(__args[0]));
             return false;
         }
     }

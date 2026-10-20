@@ -12,6 +12,7 @@ Theoretically, the key values in `mu3-VO.ini` can be modified before each battle
 Currently, the following adjustable options are included in `mu3-VO.ini`:
 | Section | Key | Description | Acceptable Values |
 | ------------- | ------------- | ------------- | ---------- |
+| ExtendOffset  | OffsetRange    | Adjustable range of offset A/B | Any decimal greater than 2.0, with an upper limit of 100.0 |
 | CleanBattlefield  | ShowPlayerInfo    | Whether to display the player panel on the left (including scores, HP, judgement counts, Damage count, Bell count, etc.) | 0 (disable) or 1 (enable) |
 | CleanBattlefield  | ShowEnemyInfo     | Whether to display the enemy panel on the right (including enemy type, HP, accumulated rewards, etc.) | 0 or 1 |
 | CleanBattlefield  | ShowRetireInfo    | Whether to display Battle Retirement score info | 0 or 1 |

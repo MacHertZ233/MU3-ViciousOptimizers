@@ -57,6 +57,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patches\OffsetConfig.cs" />
+    <Compile Include="Patches\OffsetRuntime.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Patches\GameOptionPatch.cs" />
     <Compile Include="Patches\OptionMiniSummaryControllerPatch.cs" />

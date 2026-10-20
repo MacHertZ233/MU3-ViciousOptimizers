@@ -9,7 +9,7 @@
 
 目前包含了以下mod：
 
-+ **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0。
++ **ExtendOffset**：将A和B延迟的可调整范围从±2.0扩大至±10.0（或更大的范围）。
 + **GuideSEOffset**：让正解音的延迟可被单独调整，而不受A延迟的影响。
 + **ShutTheFxxkUp**：消除敌人的人声和提示击败敌人的音效，以使音乐再也不会被它们盖过。
 + **CleanBattlefield**：可选隐藏战斗界面中的若干元素。详见[此处](doc/IniSpecification_zh-hans.md)。
@@ -26,8 +26,6 @@
 + **插件方法**：把`<mod名称>_plugin.dll`放入`BepInEx\plugins`文件夹中。
 + **MonoMod方法**：把`Assembly-CSharp.<mod名称>.mm.dll`放入`BepInEx\monomod`文件夹中。
 
-对于ExtendOffset，还有一种最终方案，即是把游戏的`Assembly-CSharp.dll`用`Assembly-CSharp-offset10.dll`覆盖掉。注意注意！务必在当且仅当以上两种方法都不可行时再使用此方法。
-
 ## 设置修改
 
 把`mu3-VO.ini`放入`<MU3游戏路径>\package`文件夹中，然后在运行游戏前，根据需要修改ini文件中每个设置的值（0 或 1）。
@@ -37,12 +35,15 @@
 ## 支持的游戏版本
 
 + 1.50
++ 1.55
++ 1.60（或许）
 
 ## 已知问题
 
 + MonoMod版本的ExtendOffset目前与[MoreProfileOptions](https://www.rainycolor.org/package/7EVENDAYSHOLIDAYS/MoreProfileOptions/)不兼容。具体体现为：当同时使用上述两个mod时，A和B延迟的可调整范围可能会被锁死在-10.0至-6.0。
-  + 最新发布的插件版本旨在解决这一问题，但仍欠缺更多测试。
-  + 一个修改过后的`Assembly-CSharp-offset10.dll`，将会作为最终替代方案提供。
+  + 插件版本旨在解决这一冲突，推荐优先使用。
+
++ 当ExtendOffset的OffsetRange被频繁更改时，超出常规范围（即±2.0）的数值可能会被重新映射为错误的值。除非需要，请避免随意更改数值范围。
 
 + 当使用ExtendOffset，并将A延迟调整到较大的数值时（无论正负），音乐开始前的提示音会明显偏离音乐节奏。
   + 使用GuideSEOffset，并将OffsetCount设置为0左右，可以在大部分情况下缓解该情况。但天知道开发组的对音工作行不行。
