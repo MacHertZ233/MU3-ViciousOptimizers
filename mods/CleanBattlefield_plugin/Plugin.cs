@@ -7,7 +7,7 @@ namespace CleanBattlefield_plugin
     [BepInPlugin(modGUID, modName, modVersion)]
     public class CleanBattlefieldPlugin : BaseUnityPlugin
     {
-        const string modGUID = "machertz233.CleanBattlefield";
+        const string modGUID = "machertz233.cleanbattlefield";
         const string modName = "CleanBattlefield";
         const string modVersion = "1.1.2";
 
