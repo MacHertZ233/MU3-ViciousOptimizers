@@ -26,13 +26,11 @@ There are 2 ways to install each mod. Just choose between one of them.
 + **Plugin Method**: Put `<ModName>_plugin.dll` into `BepInEx\plugins` folder.
 + **MonoMod Method**: Put `Assembly-CSharp.<ModName>.mm.dll` into `BepInEx\monomod` folder.
 
-For *ExtendOffset*, there is also a final solution, which is to replace the game's `Assembly-CSharp.dll` with `Assembly-CSharp-offset10.dll`. BEWARE: Use this method if and only if neither of the above methods is feasible.
-
 ## Settings Modification
 
 Put `mu3-VO.ini` into `<MU3_game_path>\package` folder, and modify the value (0 or 1) of each setting in the ini file as needed before launching the game.
 
-Currently *CleanBattlefield* and *ShutTheFxxkUp* supports settings changes in this way. For detailed specifications, please refer [here](doc/IniSpecification.md).
+For detailed specifications, please refer [here](doc/IniSpecification.md).
 
 ## Supported Game Versions
 

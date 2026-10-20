@@ -30,7 +30,7 @@
 
 把`mu3-VO.ini`放入`<MU3游戏路径>\package`文件夹中，然后在运行游戏前，根据需要修改ini文件中每个设置的值（0 或 1）。
 
-目前CleanBattlefield和ShutTheFxxkUp支持以这种方式更改设置。关于详细说明，请参照[此处](doc/IniSpecification_zh-hans.md)。
+关于详细说明，请参照[此处](doc/IniSpecification_zh-hans.md)。
 
 ## 支持的游戏版本
 
